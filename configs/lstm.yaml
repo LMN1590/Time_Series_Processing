@@ -1,0 +1,37 @@
+data:
+  root_path: '/root/data/'
+  data_path: 'ETTh1.csv'
+  output_field: 'OT'
+  in_len: &in_len 16
+  data_split: [0.7,0.2,0.1]
+
+  batch_size: 250
+  num_workers: 3
+  drop_last: False
+  pin_memory: False
+
+model:
+  name: LSTM
+  params:
+    input_dim: 7
+    hidden_dim: 64
+    layer_dim: 16
+    output_dim: 1
+    dropout_prob: 0.1
+
+training_param:
+  warmup_epochs: 10
+  max_epochs: 50
+  warmup_start_lr: 1.0e-8
+  eta_min: 1.0e-8
+
+  optimizer: AdamW
+  params:
+    beta_1: 0.9
+    beta_2: 0.99
+    lr: 5.0e-4
+    weight_decay: 1.0e-5
+    
+loss:
+  name: MSELoss
+  params: {}

@@ -1,0 +1,34 @@
+model:
+  name: DebugModel
+  params:
+    input_size: 784
+    hidden_size: 128
+    output_size: 10 
+
+
+training_param:
+  warmup_epochs: 10
+  max_epochs: 50
+  warmup_start_lr: 1.0e-8
+  eta_min: 1.0e-8
+
+  optimizer: SGD
+  params:
+    lr: 5.0e-4
+    weight_decay: 1.0e-5
+    momentum: 0.9
+    
+    
+loss:
+  name: MSELoss
+  params: {}
+
+data:
+  in_len: &in_len 16
+  input_dim: &input_dim 50
+  output_dim: &output_dim 10
+
+  batch_size: 50
+  num_workers: 3
+  drop_last: False
+  pin_memory: False
