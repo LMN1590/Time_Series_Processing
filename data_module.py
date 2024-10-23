@@ -134,10 +134,6 @@ class PatientDataModule(LightningDataModule):
         self.hyperparameters = hparams
         self.data_param = hparams["data"]
         
-        random_idx = set()
-        while(len(random_idx)<10):
-            random_idx.add(random.randint(0,783))
-        
         
         self.data_train = Dataset_MTS(
             root_path=self.data_param["root_path"],

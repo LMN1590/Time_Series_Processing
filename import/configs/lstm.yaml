@@ -1,8 +1,8 @@
 data:
-  root_path: '/root/data/'
+  root_path: '/opt/ml/input/data/training/'
   data_path: 'ETTh1.csv'
   output_field: 'OT'
-  in_len: &in_len 8
+  in_len: &in_len 16
   data_split: [0.7,0.2,0.1]
 
   batch_size: 250
@@ -11,19 +11,13 @@ data:
   pin_memory: False
 
 model:
-  name: BaseTransformer
+  name: LSTM
   params:
     input_dim: 7
-    in_len: *in_len
-
-    random_embed: True
-    pos_embed_requires_grad: True
-
-    d_model: 512
-    nhead: 8
-    num_layers: 2
-    dropout_prob: 0.1
+    hidden_dim: 64
+    layer_dim: 16
     output_dim: 1
+    dropout_prob: 0.1
 
 training_param:
   warmup_epochs: 10

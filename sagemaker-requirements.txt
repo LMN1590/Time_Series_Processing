@@ -1,0 +1,5 @@
+pytorch-lightning==2.4.0
+einops
+labml_nn
+labml_helpers
+timm

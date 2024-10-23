@@ -1,8 +1,8 @@
 data:
-  root_path: '/root/data/'
+  root_path: '/opt/ml/input/data/training/'
   data_path: 'ETTh1.csv'
   output_field: 'OT'
-  in_len: &in_len 8
+  in_len: &in_len 16
   data_split: [0.7,0.2,0.1]
 
   batch_size: 250
@@ -11,25 +11,17 @@ data:
   pin_memory: False
 
 model:
-  name: Crossformer
+  name: RNN
   params:
-    data_dim: 7
-    in_len: *in_len
-    out_len: 1
+    input_dim: 7
+    hidden_dim: 64
+    layer_dim: 16
     output_dim: 1
-    seg_len: 2
-
-    random_embed: True
-    pos_embed_requires_grad: True
-
-    d_model: 512
-    win_size: 2
-    n_heads: 8
-    dropout: 0.1
+    dropout_prob: 0.1
 
 training_param:
-  warmup_epochs: 10
-  max_epochs: 50
+  warmup_epochs: 1
+  max_epochs: 5
   warmup_start_lr: 1.0e-8
   eta_min: 1.0e-8
 
@@ -43,3 +35,4 @@ training_param:
 loss:
   name: MSELoss
   params: {}
+
