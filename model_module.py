@@ -1,16 +1,23 @@
 import yaml
+import json
+from typing import Dict,Any
 
 from pytorch_lightning import LightningModule
 import torch
+import numpy as np
 
 from const import MODEL_LIST,LOSS_LIST
 from train_util.lr_scheduler import LinearWarmupCosineAnnealingLR
-from train_util.utils import load_hparams_from_yaml
+from train_util.utils import load_hparams_from_yaml,StandardScaler
+
+
+    
 
 class PatientModelModule(LightningModule):    
     def __init__(
         self,
-        hparams_path:str
+        hparams_path:str,
+        scaler_params:Dict[str,Any]
     ):
         super(PatientModelModule,self).__init__()
         self.save_hyperparameters()
@@ -27,6 +34,11 @@ class PatientModelModule(LightningModule):
         self.loss_func = LOSS_LIST[loss_params["name"]](
             **loss_params["params"]
         )
+        
+        self.scaler_params = scaler_params
+        self.scaler = StandardScaler(
+            **self.scaler_params
+        )
     
     def training_step(self,batch,batch_idx):
         input, output = batch
@@ -37,6 +49,7 @@ class PatientModelModule(LightningModule):
         self.log(
             "train/mse", loss, prog_bar=True, logger=True
         )
+        print(f'Training Step Loss: {loss}')
         return loss
 
     def validation_step(self,batch,batch_idx):
@@ -48,6 +61,7 @@ class PatientModelModule(LightningModule):
         self.log(
             "val/mse", loss, prog_bar=True, logger=True
         )
+        print(f'Validation Step Loss: {loss}')
         return loss
     
     def test_step(self,batch,batch_idx):
@@ -59,6 +73,7 @@ class PatientModelModule(LightningModule):
         self.log(
             "test/mse", loss, prog_bar=True, logger=True
         )
+        print(f'Test Step Loss: {loss}')
         return loss
 
     def configure_optimizers(self):
@@ -119,3 +134,8 @@ class PatientModelModule(LightningModule):
         scheduler = {"scheduler": lr_scheduler, "interval": "step", "frequency": 1}
 
         return {"lr_scheduler": scheduler, "optimizer": optimizer}
+    
+    def forward(self,x:torch.Tensor):
+        return self.net(x)
+    def predict(self,x:torch.Tensor):
+        return self.scaler.inverse_transform_pred(self(x))

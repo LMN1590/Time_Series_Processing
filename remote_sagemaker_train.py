@@ -20,6 +20,12 @@ print(role)
     
 from sagemaker.pytorch import PyTorch
 
+metric_definitions = [
+    {'Name': 'train:loss', 'Regex': 'Training Step Loss: ([0-9\\.]+)'},
+    {'Name': 'val:loss', 'Regex': 'Validation Step Loss: ([0-9\\.]+)'},
+    {'Name': 'test:loss', 'Regex': 'Test Step Loss: ([0-9\\.]+)'}
+]
+
 estimator = PyTorch(
     entry_point="train.py",
     role = role,
@@ -28,9 +34,10 @@ estimator = PyTorch(
     framework_version='2.3.0',          # PyTorch version
     py_version='py311',  
     input_mode='File', 
-    dependencies=['import/','data_module.py','model_module.py','sagemaker-requirements.txt','const.py'],
+    dependencies=['import_module/','data_module.py','model_module.py','sagemaker-requirements.txt','const.py'],
     output_path="s3://sgn-sagemaker-dev/patient_retention/model_training_logs/",
-    code_location="s3://sgn-sagemaker-dev/patient_retention/model_training_logs/"
+    code_location="s3://sgn-sagemaker-dev/patient_retention/model_training_logs/",
+    metric_definitions = metric_definitions
 )
 estimator.fit(
     's3://sgn-sagemaker-dev/patient_retention/data',

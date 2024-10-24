@@ -26,8 +26,8 @@ model:
     output_dim: 1
 
 training_param:
-  warmup_epochs: 10
-  max_epochs: 50
+  warmup_epochs: 1
+  max_epochs: 5
   warmup_start_lr: 1.0e-8
   eta_min: 1.0e-8
 

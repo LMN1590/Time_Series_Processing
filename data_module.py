@@ -59,21 +59,25 @@ class Dataset_MTS(Dataset):
         
         cols_data = df_raw.columns[1:]
         df_data = df_raw[cols_data]
+        self.cols_idx = cols_data.get_loc(self.output_field)
 
         if self.scale:
             if self.scale_statistic is None:
-                self.scaler = StandardScaler()
+                self.scaler = StandardScaler(cols_idx=self.cols_idx)
                 train_data = df_data[border1s[0]:border2s[0]]
                 self.scaler.fit(train_data.values)
             else:
-                self.scaler = StandardScaler(mean = self.scale_statistic['mean'], std = self.scale_statistic['std'])
+                self.scaler = StandardScaler(
+                    mean = self.scale_statistic['mean'], 
+                    std = self.scale_statistic['std'],
+                    cols_idx=self.cols_idx
+                )
             data = self.scaler.transform(df_data.values)
         else:
             data = df_data.values
 
         self.data_x = data[border1:border2]
         self.data_y = data[border1:border2]
-        self.cols_idx = cols_data.get_loc(self.output_field)
     
     def __getitem__(self, index):
         s_begin = index
@@ -162,6 +166,12 @@ class PatientDataModule(LightningDataModule):
             data_split=self.data_param["data_split"],
             scale=True
         )
+        
+        self.output_idx = self.data_train.cols_idx
+        self.scaler_params = {
+            "mean":self.data_train.scaler.mean.tolist(),
+            "std":self.data_train.scaler.std.tolist()
+        }
         
     def prepare_data(self):
         return super().prepare_data()
