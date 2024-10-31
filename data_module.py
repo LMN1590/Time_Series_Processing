@@ -1,126 +1,47 @@
 from pytorch_lightning import LightningDataModule
 import torch
 from torch.utils.data import Dataset, DataLoader
+import numpy as np
 
 import random
 from typing import List
 import pandas as pd
 import os
+from typing import List
 
 from train_util.utils import load_hparams_from_yaml,StandardScaler
+from const import SCALE_COLS
+SCALE_MEAN = np.array([col["mean"] for col in SCALE_COLS.values()])
+SCALE_STD  = np.array([col["std"] for col in SCALE_COLS.values()])
 
-
-class Dataset_MTS(Dataset):
+class PatientDataset(Dataset):
     def __init__(
-        self, root_path, data_path='ETTh1.csv', 
-        output_field:str = 'OT',
-        flag='train', in_len=16, 
-        data_split = [0.7, 0.1, 0.2], scale=True, scale_statistic=None
+        self, root_path,data_path = 'unnorm_data.csv',
+        output_field:str = 'Target',
+        random_sample_from_each_pt:bool = True,
+        flag:str = 'train', 
+        time_steps_len:int = 4, min_time_steps:int = 20,
+        data_split:List[float] = [0,7,0.1,0.2],
+        scale:bool = True, scale_statistic=None
     ):
-        # size [seq_len, label_len, pred_len]
-        # info
-        self.output_field = output_field
-        self.in_len = in_len
-        self.out_len = 1
-        # init
         assert flag in ['train', 'test', 'val']
+        assert time_steps_len <= min_time_steps, f"time_steps_len should be smaller than min_time_steps - {min_time_steps}"
+        
         type_map = {'train':0, 'val':1, 'test':2}
         self.set_type = type_map[flag]
+        self.data_split = data_split
+        
+        self.output_field = output_field
+        self.time_steps_len = time_steps_len
+        self.min_time_steps = min_time_steps
+        self.random_sample_from_each_pt = random_sample_from_each_pt
         
         self.scale = scale
-        #self.inverse = inverse
-        
-        self.root_path = root_path
-        self.data_path = data_path
-        self.data_split = data_split
-        self.scale_statistic = scale_statistic
-        self.__read_data__()
 
-    def __read_data__(self):
-        df_raw = pd.read_csv(os.path.join(
-            self.root_path,
-            self.data_path
-        ))
-        
-        if (self.data_split[0] > 1):
-            train_num = self.data_split[0]
-            val_num = self.data_split[1]
-            test_num = self.data_split[2]
-        else:
-            train_num = int(len(df_raw)*self.data_split[0])
-            test_num = int(len(df_raw)*self.data_split[2])
-            val_num = len(df_raw) - train_num - test_num
-        
-        border1s = [0, train_num - self.in_len, train_num + val_num - self.in_len]
-        border2s = [train_num, train_num+val_num, train_num + val_num + test_num]
+        self.dataframe = self.__read_data__(root_path,data_path) 
+        self.patient_ids = pd.unique(self.dataframe.index)
+        self.total_valid_records = len(self.dataframe)
 
-        border1 = border1s[self.set_type]
-        border2 = border2s[self.set_type]
-        
-        cols_data = df_raw.columns[1:]
-        df_data = df_raw[cols_data]
-
-        if self.scale:
-            if self.scale_statistic is None:
-                self.scaler = StandardScaler()
-                train_data = df_data[border1s[0]:border2s[0]]
-                self.scaler.fit(train_data.values)
-            else:
-                self.scaler = StandardScaler(mean = self.scale_statistic['mean'], std = self.scale_statistic['std'])
-            data = self.scaler.transform(df_data.values)
-        else:
-            data = df_data.values
-
-        self.data_x = data[border1:border2]
-        self.data_y = data[border1:border2]
-        self.cols_idx = cols_data.get_loc(self.output_field)
-    
-    def __getitem__(self, index):
-        s_begin = index
-        s_end = s_begin + self.in_len
-        r_begin = s_end
-        r_end = r_begin + self.out_len
-
-        seq_x = self.data_x[s_begin:s_end]
-        seq_y = self.data_y[r_begin:r_end][:,self.cols_idx]
-
-        return torch.from_numpy(seq_x).float(), torch.from_numpy(seq_y).float()
-    
-    def __len__(self):
-        return len(self.data_x) - self.in_len- self.out_len + 1
-
-    def inverse_transform(self, data):
-        return self.scaler.inverse_transform(data)
-    
-    
-    
-
-class TestDataset(Dataset):
-    def __init__(
-        self,
-        random_idx:List[int],
-        
-        input_dim:int,
-        output_dim:int,
-        time_steps:int
-    ):
-        super().__init__()
-        self.random_idx = random_idx
-        self.time_steps = time_steps
-        self.input_dim  = input_dim
-        self.output_dim = output_dim
-        
-    def __len__(self):
-        return 5000
-    def __getitem__(self,idx:int):
-        input = torch.randn((self.input_dim*self.time_steps))
-        output = torch.randn((self.output_dim))
-        
-        input[self.random_idx] = output
-        input = input.reshape((self.time_steps,-1))
-        
-        return input, output
-    
 
 class PatientDataModule(LightningDataModule):
     def __init__(
@@ -134,44 +55,83 @@ class PatientDataModule(LightningDataModule):
         self.hyperparameters = hparams
         self.data_param = hparams["data"]
         
-        random_idx = set()
-        while(len(random_idx)<10):
-            random_idx.add(random.randint(0,783))
+        self.__prepare_params__(**self.data_param)
+        if self.scale:
+            self.scaler = StandardScaler(mean = SCALE_MEAN, std = SCALE_STD)
         
         
-        self.data_train = Dataset_MTS(
-            root_path=self.data_param["root_path"],
-            data_path=self.data_param["data_path"],
-            output_field=self.data_param['output_field'],
-            flag='train',
-            in_len=self.data_param["in_len"],
-            data_split=self.data_param["data_split"],
-            scale=True
-        )
-        self.data_val   = Dataset_MTS(
-            root_path=self.data_param["root_path"],
-            data_path=self.data_param["data_path"],
-            output_field=self.data_param['output_field'],
-            flag='val',
-            in_len=self.data_param["in_len"],
-            data_split=self.data_param["data_split"],
-            scale=True
-        )
-        self.data_test  = Dataset_MTS(
-            root_path=self.data_param["root_path"],
-            data_path=self.data_param["data_path"],
-            output_field=self.data_param['output_field'],
-            flag='test',
-            in_len=self.data_param["in_len"],
-            data_split=self.data_param["data_split"],
-            scale=True
-        )
+    def __prepare_params__(
+        self, root_path:str,data_path:str = 'unnorm_data.csv',
+        output_field:str = 'Target',
+        random_sample_from_each_pt:bool = True,
+        time_steps_len:int = 4, min_time_steps:int = 20,
+        data_split:List[float] = [0,7,0.1,0.2],
+        scale:bool = True,
+        batch_size:int = 50, num_workers:int = 3,
+        drop_last:bool = False, pin_memory:bool=False
+    ):
+        self.file_path = os.path.join(root_path,data_path)
+        self.output_field = output_field
         
+        self.time_steps_len = time_steps_len
+        self.min_time_steps = min_time_steps
+        self.random_sample_from_each_pt = random_sample_from_each_pt
+        
+        self.scale = scale
+        
+        self.data_split = data_split
+        
+        self.batch_size = batch_size
+        self.num_workers = num_workers
+        self.pin_memory = pin_memory
+        self.drop_last = drop_last
+    def __read_data__(self,file_path:str):
+        df = pd.read_csv(file_path)
+        df = df.drop(df.columns[0],axis=1)
+        
+        df = df[df.groupby('PatientId')['PatientId'].transform('size') >= self.min_time_steps]
+        
+        pt_ids = df["PatientId"].unique()
+        random.shuffle(pt_ids)
+        df = df.set_index("PatientId").loc[pt_ids]
+        
+        return df
+    def __get_data_split__(self,patient_ids:np.ndarray):
+        if (self.data_split[0] > 1):
+            train_num = self.data_split[0]
+            val_num = self.data_split[1]
+            test_num = self.data_split[2]
+        else:
+            train_num = int(len(self.patient_ids)*self.data_split[0])
+            test_num = int(len(self.patient_ids)*self.data_split[2])
+            val_num = len(self.patient_ids) - train_num - test_num
+        
+        border1s = [0, train_num, train_num + val_num]
+        border2s = [train_num, train_num+val_num, train_num + val_num + test_num]
+        
+        return [patient_ids[borders[0]:borders[1]] for borders in zip(border1s,border2s)]
+        
+    
     def prepare_data(self):
         return super().prepare_data()
     
     def setup(self, stage):
-        return super().setup(stage)
+        self.dataframe = self.__read_data__(self.file_path)
+        self.patient_ids = pd.unique(self.dataframe.index)
+        
+        self.data_split_index = self.__get_data_split__(self.patient_ids)
+        if self.scale:
+            self.dataframe[SCALE_COLS.keys()] = self.scaler.transform(self.dataframe[SCALE_COLS.keys()])
+        
+        
+        self.data_train = PatientDataset(
+            dataframe       = self.dataframe,
+            patient_ids     = self.data_split_index[0],
+            output_field    = self.output_field
+        )
+
+
+    
 
     def train_dataloader(self):
         return DataLoader(
