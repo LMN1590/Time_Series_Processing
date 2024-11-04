@@ -1,19 +1,27 @@
 data:
   root_path: '/root/data/'
-  data_path: 'ETTh1.csv'
-  output_field: 'OT'
-  in_len: &in_len 16
-  data_split: [0.7,0.2,0.1]
+  data_path: 'unnorm_data.csv'
+  output_field: 'Target'
+  
+  random_sample_from_each_pt: True
+  equal_sample: True
+  time_steps_len: &time_steps_len 4
+  min_time_steps: 20
+  sampled_steps:  16
+
+  data_split: [0.7,0.1,0.2]
+  scale: True
 
   batch_size: 250
   num_workers: 3
   drop_last: False
   pin_memory: False
 
+
 model:
   name: GRU
   params:
-    input_dim: 7
+    input_dim: 170
     hidden_dim: 64
     layer_dim: 16
     output_dim: 1
@@ -33,5 +41,9 @@ training_param:
     weight_decay: 1.0e-5
     
 loss:
-  name: MSELoss
-  params: {}
+  - name: GaussianLoss
+    params: {}
+    weight: 1.
+  - name: MSELoss
+    params: {}
+    weight: 1.

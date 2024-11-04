@@ -2,7 +2,7 @@ import math
 
 import torch
 import torch.nn as nn
-from timm.models.layers import trunc_normal_
+from timm.layers import trunc_normal_
 from einops import repeat
 
 from .utils import PositionalEncoding 
@@ -12,7 +12,7 @@ class BaseTransformerModel(nn.Module):
     def __init__(
         self,
         input_dim:int,
-        in_len:int,
+        time_steps_len:int,
         
         random_embed:bool,
         pos_embed_requires_grad:bool,
@@ -29,7 +29,7 @@ class BaseTransformerModel(nn.Module):
         print(self.preprocess.weight.dtype)
         
         self.pos_embed = PositionalEncoding(
-            size = (in_len,1,d_model),
+            size = (time_steps_len,1,d_model),
             random=random_embed,
             pos_embed_require_grad=pos_embed_requires_grad
         )
@@ -51,12 +51,13 @@ class BaseTransformerModel(nn.Module):
             torch.randn((1,1,d_model))
         )
         
-        self.final_output = nn.Linear(d_model,output_dim)
+        self.mean_output = nn.Linear(d_model,output_dim)
+        self.std_output = nn.Linear(d_model,output_dim)
+        self.std_act = nn.Softplus()
         self._init_weights()
         
     def forward(self,x:torch.Tensor):
         B,T,I = x.shape
-        
         x = self.preprocess(x)
         x = x.permute(1,0,2)
         x = self.pos_embed(x)
@@ -64,14 +65,19 @@ class BaseTransformerModel(nn.Module):
         
         decoder_seed = repeat(self.decoder_fluff, 'ts b d -> ts (repeat b) d',repeat = B)
         x = self.decoder(decoder_seed,x)
-        x = x.permute(1,0,2).flatten(1)
-        x = self.final_output(x)
-        return x
+        x = x.permute(1,0,2)
+        x = x.flatten(1)
+        mean = self.mean_output(x).flatten()
+        std = self.std_act(self.std_output(x)).flatten()
+        return torch.stack([mean,std])
         
     def _init_weights(self):
         initrange = 0.1    
-        self.final_output.bias.data.zero_()
-        self.final_output.weight.data.uniform_(-initrange, initrange)
+        self.mean_output.bias.data.zero_()
+        self.mean_output.weight.data.uniform_(-initrange, initrange)
+        
+        self.std_output.bias.data.zero_()
+        self.std_output.weight.data.uniform_(-initrange, initrange)
         
     def _generate_square_subsequent_mask(self, sz):
         mask = (torch.triu(torch.ones(sz, sz)) == 1).transpose(0, 1)

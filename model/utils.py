@@ -1,7 +1,7 @@
 import torch.nn as nn
 import torch
 
-from timm.models.layers import trunc_normal_
+from timm.layers import trunc_normal_
 import math
 
 from typing import Tuple

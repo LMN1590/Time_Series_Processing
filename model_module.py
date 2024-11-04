@@ -1,4 +1,5 @@
 import yaml
+from typing import Tuple
 
 from pytorch_lightning import LightningModule
 import torch
@@ -24,40 +25,82 @@ class PatientModelModule(LightningModule):
         )
         
         loss_params = hparams["loss"]
-        self.loss_func = LOSS_LIST[loss_params["name"]](
-            **loss_params["params"]
-        )
+        self.loss_params = loss_params
+        for loss in loss_params:
+            setattr(
+                self,
+                loss["name"],
+                LOSS_LIST[loss["name"]](
+                    **loss["params"]
+                )
+            )
     
-    def training_step(self,batch,batch_idx):
+    def training_step(self,batch:Tuple[torch.Tensor, torch.Tensor],batch_idx):
         input, output = batch
+        input = input.flatten(0,1)
+        output = output.flatten(0,1)
         
         prediction = self.net(input)
-        loss = self.loss_func(output,prediction)
+        mean = prediction[0]
+        std = prediction[1]
         
+        loss = torch.zeros(1).cuda()
+        
+        for idx, loss_setting in enumerate(self.loss_params):
+            loss_func = getattr(self,loss_setting["name"])
+            loss_val = loss_func(mean,std,output) * loss_setting["weight"]
+            loss += loss_val
+
         self.log(
             "train/mse", loss, prog_bar=True, logger=True
         )
         return loss
 
-    def validation_step(self,batch,batch_idx):
+    def validation_step(self,batch:Tuple[torch.Tensor, torch.Tensor],batch_idx):
         input, output = batch
+        input = input.flatten(0,1)
+        output = output.flatten(0,1)
         
         prediction = self.net(input)
-        loss = self.loss_func(output,prediction)
+        mean = prediction[0]
+        std = prediction[1]
+        
+        loss = torch.zeros(1).cuda()
+        
+        for idx, loss_setting in enumerate(self.loss_params):
+            loss_func = getattr(self,loss_setting["name"])
+            loss_val = loss_func(mean,std,output) * loss_setting["weight"]
+            loss += loss_val
         
         self.log(
             "val/mse", loss, prog_bar=True, logger=True
         )
         return loss
     
-    def test_step(self,batch,batch_idx):
+    def test_step(self,batch:Tuple[torch.Tensor, torch.Tensor],batch_idx):
         input, output = batch
+        input = input.flatten(0,1)
+        output = output.flatten(0,1)
         
         prediction = self.net(input)
-        loss = self.loss_func(output,prediction)
+        mean = prediction[0]
+        std = prediction[1]
+        
+        loss = torch.zeros(1).cuda()
+        
+        for idx, loss_setting in enumerate(self.loss_params):
+            loss_func = getattr(self,loss_setting["name"])
+            loss_val = loss_func(mean,std,output) * loss_setting["weight"]
+            loss += loss_val
         
         self.log(
             "test/mse", loss, prog_bar=True, logger=True
+        )
+        self.log(
+            "test/pred_mean", mean.mean().item(),prog_bar=True,logger=True
+        )
+        self.log(
+            "test/pred_std", std.mean().item(),prog_bar=True,logger=True
         )
         return loss
 

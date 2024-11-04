@@ -5,7 +5,7 @@ from functools import reduce
 
 import numpy as np
 
-from preprocess.const import ICD_DICT,RACE,VACCINATION,INSURANCE_CLAIM_TYPE
+from const import ICD_DICT,RACE,VACCINATION,INSURANCE_CLAIM_TYPE
 
 class Temp:
     def __init__(self):
@@ -13,7 +13,7 @@ class Temp:
 
 ZCDB = ZipCodeDatabase()
 
-df = pd.read_csv("./data/Full_DataV3.csv")
+df = pd.read_csv("../data/Full_DataV3.csv")
 df["EncounterDt"] = df["EncounterDt"].apply(lambda x:datetime.strptime(x, "%m/%d/%y %H:%M"))
 df = df.sort_values(by=["PatientId","EncounterDt"], ignore_index=True)
 
@@ -202,6 +202,6 @@ cleaned_df["Average Visit Pattern"] = df["Average Duration PCP Visit"].fillna(df
 
 
 print(cleaned_df.head())
-cleaned_df.to_csv("data/unnorm_data.csv")
+cleaned_df.to_csv("../data/unnorm_data.csv")
 
 

@@ -42,7 +42,11 @@ class GRUModel(nn.Module):
         )
 
         # Fully connected layer
-        self.fc = nn.Linear(hidden_dim, output_dim)
+        self.mean_output = nn.Linear(hidden_dim,output_dim)
+        self.std_output = nn.Linear(hidden_dim,output_dim)
+        self.std_act = nn.Softplus()
+        self._init_weights()
+        
 
     def forward(self, x):
         """The forward method takes input tensor x and does forward propagation
@@ -65,6 +69,14 @@ class GRUModel(nn.Module):
         out = out[:, -1, :]
 
         # Convert the final state to our desired output shape (batch_size, output_dim)
-        out = self.fc(out)
-
-        return out
+        mean = self.mean_output(out).flatten()
+        std = self.std_act(self.std_output(out)).flatten()
+        return torch.stack([mean,std])
+    
+    def _init_weights(self):
+        initrange = 0.1    
+        self.mean_output.bias.data.zero_()
+        self.mean_output.weight.data.uniform_(-initrange, initrange)
+        
+        self.std_output.bias.data.zero_()
+        self.std_output.weight.data.uniform_(-initrange, initrange)

@@ -23,11 +23,19 @@ loss:
   params: {}
 
 data:
-  in_len: &in_len 16
-  input_dim: &input_dim 50
-  output_dim: &output_dim 10
+  root_path: '/root/data/'
+  data_path: 'unnorm_data.csv'
+  output_field: 'Target'
+  
+  random_sample_from_each_pt: True
+  time_steps_len: 4
+  min_time_steps: 20
+  sampled_steps:  10
 
-  batch_size: 50
+  data_split: [0,7,0.1,0.2]
+  scale: True
+
+  batch_size: 250
   num_workers: 3
   drop_last: False
   pin_memory: False

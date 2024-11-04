@@ -17,7 +17,7 @@ image = (
         Mount.from_local_dir("configs",remote_path="/root/configs"),
         Mount.from_local_dir("model",remote_path="/root/model"),
         Mount.from_local_dir("train_util",remote_path="/root/train_util"),
-        Mount.from_local_dir("data",remote_path="/root/data"),
+        Mount.from_local_dir("loss",remote_path="/root/loss"),
         
         Mount.from_local_file("const.py","/root/const.py"),
         Mount.from_local_file("data_module.py","/root/data_module.py"),
@@ -26,7 +26,8 @@ image = (
         Mount.from_local_file("remote.py","/root/remote.py")
     ],
     volumes={
-        "/root/saved": Volume.from_name("retention_log")
+        "/root/saved": Volume.from_name("retention_log_official"),
+        "/root/data": Volume.from_name("retention_data")
     }
 )
 def entry():
@@ -35,18 +36,22 @@ def entry():
     from pytorch_lightning.loggers import CSVLogger
     import torch
     
+    from datetime import datetime
+    
     from data_module import PatientDataModule
     from model_module import PatientModelModule 
     
     from train_util.utils import load_hparams_from_yaml
-    
-    hparams_path = "/root/configs/crossformer.yaml"
+    model_name = "xlstm"
+    hparams_path = f"/root/configs/{model_name}.yaml"
     hparams = load_hparams_from_yaml(hparams_path)
+    
+    log_name = f'{datetime.now().isoformat()}_{model_name}'
     datamodule = PatientDataModule(hparams_path)
     model = PatientModelModule(hparams_path)
     
     checkpoint_cb = ModelCheckpoint(
-        dirpath="/root/saved/checkpoints",
+        dirpath=f"/root/saved/{model_name}/{log_name}/checkpoints",
         filename=f'{hparams["model"]["name"]}' + "_epoch({epoch:02d})_step({step:04d})_val_{val/mse:.4f}",
         
         monitor="val/mse",
@@ -59,7 +64,8 @@ def entry():
         save_top_k=3,
     )
     csv_logger = CSVLogger(
-        save_dir="/root/saved/logs"
+        save_dir=f"/root/saved/{model_name}/{log_name}/logs",
+        
     )
     early_stopping_cb = EarlyStopping(
         monitor="val/mse",

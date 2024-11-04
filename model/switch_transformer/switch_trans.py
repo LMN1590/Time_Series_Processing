@@ -72,7 +72,10 @@ class SwitchTransformer(nn.Module):
             torch.randn((1,1,d_model))
         )
         
-        self.final_output = nn.Linear(d_model,output_dim)
+        self.mean_output = nn.Linear(d_model,output_dim)
+        self.std_output = nn.Linear(d_model,output_dim)
+        self.std_act = nn.Softplus()
+
         
         self.n_layers = n_layers
         self._init_weights()
@@ -95,10 +98,14 @@ class SwitchTransformer(nn.Module):
             encs, torch.ones(self.n_layers,1,T,1).float().cuda()
         )
         x = x.permute(1,0,2).flatten(1)
-        x = self.final_output(x)
-        return x
+        mean = self.mean_output(x).flatten()
+        std = self.std_act(self.std_output(x)).flatten()
+        return torch.stack([mean,std])
     
     def _init_weights(self):
         initrange = 0.1    
-        self.final_output.bias.data.zero_()
-        self.final_output.weight.data.uniform_(-initrange, initrange)
+        self.mean_output.bias.data.zero_()
+        self.mean_output.weight.data.uniform_(-initrange, initrange)
+        
+        self.std_output.bias.data.zero_()
+        self.std_output.weight.data.uniform_(-initrange, initrange)

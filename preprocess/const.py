@@ -1,6 +1,6 @@
 import json
 
-with open("data/race_final.json","r") as file:
+with open("../data/race_final.json","r") as file:
     RACE = json.load(file)
 
 ICD_DICT = {
@@ -185,7 +185,7 @@ ICD_DICT = {
 #     ]
 # }
 
-with open("data/vacc_final.json", "r") as file:
+with open("../data/vacc_final.json", "r") as file:
     VACCINATION = json.load(file)
     
 INSURANCE_CLAIM_TYPE = [

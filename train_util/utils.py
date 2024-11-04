@@ -6,7 +6,7 @@ def load_hparams_from_yaml(yaml_file):
         config = yaml.safe_load(file)
     return config
 
-class StandardScaler():
+class StandardScaler:
     def __init__(self, mean=0., std=1.):
         self.mean = mean
         self.std = std
@@ -23,4 +23,12 @@ class StandardScaler():
     def inverse_transform(self, data):
         mean = torch.from_numpy(self.mean).type_as(data).to(data.device) if torch.is_tensor(data) else self.mean
         std = torch.from_numpy(self.std).type_as(data).to(data.device) if torch.is_tensor(data) else self.std
+        return (data * std) + mean
+
+    def inverse_transform_pred(self,data):
+        mean = torch.from_numpy(self.mean).type_as(data).to(data.device) if torch.is_tensor(data) else self.mean
+        std = torch.from_numpy(self.std).type_as(data).to(data.device) if torch.is_tensor(data) else self.std
+        
+        mean = mean[-1:]
+        std = std[-1:]
         return (data * std) + mean

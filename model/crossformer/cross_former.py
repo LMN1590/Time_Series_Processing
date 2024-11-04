@@ -55,9 +55,10 @@ class Crossformer(nn.Module):
         self.decoder = Decoder(seg_len, e_layers + 1, d_model, n_heads, d_ff, dropout, \
                                     out_seg_num = (self.pad_out_len // seg_len), factor = factor)
         
-        self.fc = nn.Linear(
-            self.data_dim*self.out_len, self.output_dim
-        )
+        self.mean_output = nn.Linear(self.data_dim*self.out_len,self.output_dim)
+        self.std_output = nn.Linear(self.data_dim*self.out_len,self.output_dim)
+        self.std_act = nn.Softplus()
+        self._init_weights()
         
     def forward(self, x_seq):
         if (self.baseline):
@@ -80,5 +81,15 @@ class Crossformer(nn.Module):
 
         decoded_prediction = base + predict_y[:, :self.out_len, :]
         decoded_prediction = decoded_prediction.flatten(1)
-        result = self.fc(decoded_prediction)
-        return result
+        
+        mean = self.mean_output(decoded_prediction).flatten()
+        std = self.std_act(self.std_output(decoded_prediction)).flatten()
+        return torch.stack([mean,std])
+    
+    def _init_weights(self):
+        initrange = 0.1    
+        self.mean_output.bias.data.zero_()
+        self.mean_output.weight.data.uniform_(-initrange, initrange)
+        
+        self.std_output.bias.data.zero_()
+        self.std_output.weight.data.uniform_(-initrange, initrange)

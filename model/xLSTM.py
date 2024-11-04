@@ -293,7 +293,10 @@ class xLSTM(nn.Module):
                 raise ValueError(f"Invalid layer type: {layer_type}. Choose 's' for sLSTM or 'm' for mLSTM.")
             self.layers.append(layer)
             
-        self.fc = nn.Linear(input_size*in_len, output_dim)
+        self.mean_output = nn.Linear(input_size*in_len,output_dim)
+        self.std_output = nn.Linear(input_size*in_len,output_dim)
+        self.std_act = nn.Softplus()
+        self._init_weights()
 
     def forward(self, x, state=None):
         assert x.ndim == 3
@@ -326,6 +329,14 @@ class xLSTM(nn.Module):
         state = tuple(state.transpose(0, 1))
         
         output = output.flatten(1)
-        output = self.fc(output)
+        mean = self.mean_output(output).flatten()
+        std = self.std_act(self.std_output(output)).flatten()
+        return torch.stack([mean,std])
+    
+    def _init_weights(self):
+        initrange = 0.1    
+        self.mean_output.bias.data.zero_()
+        self.mean_output.weight.data.uniform_(-initrange, initrange)
         
-        return output
+        self.std_output.bias.data.zero_()
+        self.std_output.weight.data.uniform_(-initrange, initrange)

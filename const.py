@@ -9,7 +9,10 @@ from model import (
     SwitchTransformer
 )
 
-from torch.nn import MSELoss
+from loss import (
+    MSE_Module,
+    GaussianLoss_Module
+)
 
 MODEL_LIST = {
     "DebugModel":DebugModel,
@@ -22,7 +25,8 @@ MODEL_LIST = {
     "Switch_Former": SwitchTransformer
 }
 LOSS_LIST = {
-    "MSELoss":MSELoss
+    "MSELoss":MSE_Module,
+    "GaussianLoss":GaussianLoss_Module
 }
 
 SCALE_COLS = {
@@ -41,10 +45,10 @@ SCALE_COLS = {
     'RescheduledRateThePast6Months': {'mean': 0.15612077044526768, 'std': 0.1339384312562343}, 
     'CancelledAppointmentsSinceLastEncounter': {'mean': 0.2672286817380437, 'std': 0.6500633444773264}, 
     'RescheduledAppointmentsSinceLastEncounter': {'mean': 0.30636702448168895, 'std': 0.7095928735594833}, 
-    'Target': {'mean': 27.660040393670915, 'std': 36.42564782642134}, 
     'Current ICD Count': {'mean': 13.32399741123435, 'std': 10.304246862455331}, 
     '6months ICD Count': {'mean': 21.18070030574215, 'std': 11.426550590906622}, 
     'allergies_count': {'mean': 0.39879265326162155, 'std': 0.9348012162877456}, 
     'vaccination_count': {'mean': 0.24408043027070456, 'std': 0.6698808172313843}, 
-    'Average Visit Pattern': {'mean': 36.18208549930163, 'std': 38.270728456473265}
+    'Average Visit Pattern': {'mean': 36.18208549930163, 'std': 38.270728456473265},
+    'Target': {'mean': 27.660040393670915, 'std': 36.42564782642134}, 
 }
