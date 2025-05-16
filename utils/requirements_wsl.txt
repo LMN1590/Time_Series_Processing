@@ -1,0 +1,12 @@
+pandas
+pytorch-lightning==2.4.0
+-f https://download.pytorch.org/whl/cpu/torch_stable.html
+torch==2.3.0+cpu
+torchvision==0.18.0+cpu
+scikit-learn==1.5.2
+numpy==1.26.4
+timm
+gradio
+einops
+labml_nn
+pyzipcode

@@ -1,6 +1,6 @@
 data:
   root_path: '/root/data/'
-  data_path: 'unnorm_data.csv'
+  data_path: 'unnorm_data_reduced_v2.csv'
   output_field: 'Target'
   
   random_sample_from_each_pt: True
@@ -20,7 +20,7 @@ data:
 model:
   name: Crossformer
   params:
-    data_dim: 170
+    data_dim: 96
     in_len: *time_steps_len
     out_len: 1
     output_dim: 1
@@ -37,7 +37,7 @@ model:
 
 training_param:
   warmup_epochs: 10
-  max_epochs: 50
+  max_epochs: 100
   warmup_start_lr: 1.0e-8
   eta_min: 1.0e-8
 
@@ -55,3 +55,6 @@ loss:
   - name: MSELoss
     params: {}
     weight: 1.
+  - name: StdReg
+    params: {}
+    weight: 1.0e-3

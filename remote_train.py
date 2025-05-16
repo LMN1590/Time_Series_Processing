@@ -1,6 +1,7 @@
 from modal import App,Image,gpu,Mount,Volume
 
-app = App("testing")
+model_name = "switch_transformer"
+app = App(f'Experiments {model_name} all log and robust, but no last this time.')
 
 image = (
     Image.debian_slim(python_version="3.10")
@@ -10,7 +11,7 @@ image = (
 
 @app.function(
     image=image,
-    gpu = "t4",
+    gpu = "a10g",
     timeout=86400,
     retries=0,
     mounts = [
@@ -18,15 +19,17 @@ image = (
         Mount.from_local_dir("model",remote_path="/root/model"),
         Mount.from_local_dir("train_util",remote_path="/root/train_util"),
         Mount.from_local_dir("loss",remote_path="/root/loss"),
+        Mount.from_local_dir("preprocess",remote_path="/root/preprocess"),
         
         Mount.from_local_file("const.py","/root/const.py"),
         Mount.from_local_file("data_module.py","/root/data_module.py"),
         Mount.from_local_file("main.py","/root/main.py"),
         Mount.from_local_file("model_module.py","/root/model_module.py"),
-        Mount.from_local_file("remote.py","/root/remote.py")
+        Mount.from_local_file("remote_train.py","/root/remote_train.py")
+        
     ],
     volumes={
-        "/root/saved": Volume.from_name("retention_log_official"),
+        "/root/saved": Volume.from_name("retention_log_final"),
         "/root/data": Volume.from_name("retention_data")
     }
 )
@@ -35,14 +38,16 @@ def entry():
     from pytorch_lightning.callbacks import ModelCheckpoint,EarlyStopping
     from pytorch_lightning.loggers import CSVLogger
     import torch
+    import os
     
     from datetime import datetime
+    import shutil
     
     from data_module import PatientDataModule
     from model_module import PatientModelModule 
     
     from train_util.utils import load_hparams_from_yaml
-    model_name = "xlstm"
+    
     hparams_path = f"/root/configs/{model_name}.yaml"
     hparams = load_hparams_from_yaml(hparams_path)
     
@@ -50,11 +55,14 @@ def entry():
     datamodule = PatientDataModule(hparams_path)
     model = PatientModelModule(hparams_path)
     
+    os.makedirs(f"/root/saved/{model_name}/{log_name}/settings/",exist_ok=True)
+    shutil.copyfile(hparams_path, f"/root/saved/{model_name}/{log_name}/settings/{model_name}.yaml")
+    
     checkpoint_cb = ModelCheckpoint(
         dirpath=f"/root/saved/{model_name}/{log_name}/checkpoints",
-        filename=f'{hparams["model"]["name"]}' + "_epoch({epoch:02d})_step({step:04d})_val_{val/mse:.4f}",
+        filename=f'{hparams["model"]["name"]}' + "_epoch({epoch:02d})_step({step:04d})_val_{val/all:.4f}",
         
-        monitor="val/mse",
+        monitor="val/all",
         mode="min",
         
         auto_insert_metric_name=False,
@@ -68,15 +76,11 @@ def entry():
         
     )
     early_stopping_cb = EarlyStopping(
-        monitor="val/mse",
+        monitor="val/all",
         mode="min",
-        patience=5,
+        patience=10,
         min_delta = 0
     )
-    
-    # input_temp = torch.randn((4,16,49))
-    # output = model.net(input_temp)
-    # print(output.shape)
     
     trainer = pl.Trainer(
         accelerator="gpu",

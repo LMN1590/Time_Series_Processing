@@ -42,8 +42,11 @@ training_param:
 loss:
   - name: GaussianLoss
     params: {}
-    weight: 1.
+    weight: 0.1
   - name: MSELoss
     params: {}
     weight: 1.
+  - name: StdReg
+    params: {}
+    weight: 0.00001
 

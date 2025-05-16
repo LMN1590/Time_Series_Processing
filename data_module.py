@@ -9,10 +9,11 @@ import pandas as pd
 import os
 from typing import List
 
-from train_util.utils import load_hparams_from_yaml,StandardScaler
-from const import SCALE_COLS
-SCALE_MEAN = np.array([col["mean"] for col in SCALE_COLS.values()]) + 1e-6
-SCALE_STD  = np.array([col["std"] for col in SCALE_COLS.values()]) + 1e-6
+from train_util.utils import load_hparams_from_yaml
+from sklearn.preprocessing import RobustScaler,StandardScaler
+from preprocess.const import SCALE_COLS,ROBUST_SCALE_CONST,STANDARD_SCALE_CONST,LOG_COLS,ROBUST_SCALE_NO_LOG,SEED
+
+random.seed(SEED)
 
 class PatientDataset(Dataset):
     def __init__(
@@ -39,31 +40,38 @@ class PatientDataset(Dataset):
     def __getitem__(self, index):
         pt_idx = self.pt_idx[index]
         patient_data = self.dataframe.loc[pt_idx].reset_index()
+        filtered_patient_data = patient_data[patient_data["Lost_lim_2.5?"]==False].iloc[:-1]
         if self.random_sample_from_each_pt:
             if self.equal_sample:
-                sampled_row = patient_data[self.time_steps_len:].sample(n=self.sampled_steps)
+                sampled_row = filtered_patient_data[self.time_steps_len-1:].sample(n=self.sampled_steps)
             else:
-                sampled_row = patient_data[self.time_steps_len:].sample(frac=1.)
+                sampled_row = filtered_patient_data[self.time_steps_len-1:].sample(frac=1.)
             row_index = sampled_row.index.to_list()
+
         else:
-            sampled_upper_lin = self.time_steps_len+self.sampled_steps if self.equal_sample else patient_data.shape[0]
-            row_index = list(range(self.time_steps_len,sampled_upper_lin))
+            row_index = []
+            for i in range(self.time_steps_len-1,filtered_patient_data.shape[0]):
+                row = filtered_patient_data.iloc[i]
+                if not row["Lost_lim_2.5?"]: row_index.append(i)
+                if self.equal_sample and len(row)==self.sampled_steps: break
         
         data_x = []
         data_y = []
         for idx in row_index:
-            serie = list(range(idx-self.time_steps_len,idx))
+            serie = list(range(idx-self.time_steps_len+1,idx+1))
             try:
                 full_data = patient_data.loc[serie]
             except Exception as e:
+                print(pt_idx)
                 print(serie)
                 print(idx)
+                raise e
             data_x.append(torch.from_numpy(
-                full_data.drop(["PatientId",self.output_field],axis=1)
+                full_data.drop(["PatientId","Target","Target_shift_1"]+list(full_data.columns[-11:]),axis=1)
                 .values.astype(float)
             ))
             data_y.append(torch.from_numpy(
-                np.asarray(patient_data.loc[idx][self.output_field])
+                np.asarray(patient_data.loc[idx]["Target_shift_1"])
             ))
         return torch.stack(data_x).float(),torch.stack(data_y).float()
         
@@ -88,7 +96,16 @@ class PatientDataModule(LightningDataModule):
         self.data_split_index = self.__get_data_split__(self.patient_ids)
         
         if self.scale:
-            self.scaler = StandardScaler(mean = SCALE_MEAN, std = SCALE_STD)
+            self.dataframe[LOG_COLS] = np.log(self.dataframe[LOG_COLS]+1)
+            
+            self.scaler = RobustScaler()
+            self.scaler.center_ = ROBUST_SCALE_CONST["center"]
+            self.scaler.scale_ = ROBUST_SCALE_CONST["scale"]
+            
+            # self.scaler = StandardScaler()
+            # self.scaler.mean_ = STANDARD_SCALE_CONST["mean"]
+            # self.scaler.var_ = STANDARD_SCALE_CONST["var"]
+            # self.scaler.scale_ = STANDARD_SCALE_CONST["scale"]
             self.dataframe[list(SCALE_COLS.keys())] = self.scaler.transform(self.dataframe[list(SCALE_COLS.keys())])
             
         
@@ -126,12 +143,15 @@ class PatientDataModule(LightningDataModule):
         self.drop_last = drop_last
     def __read_data__(self,file_path:str):
         df = pd.read_csv(file_path)
-        df = df.drop(df.columns[[0,1,3]], axis=1)
+        df = df.drop(df.columns[[0,2,3,4]], axis=1)
         
-        df = df[df.groupby('PatientId')['PatientId'].transform('size') >= self.min_time_steps]
+        temp_df = df.copy()
+        temp_df["Lost_lim_2.5?"] = temp_df["Lost_lim_2.5?"] == False
+        df = df[temp_df.groupby("PatientId")["Lost_lim_2.5?"].transform("sum") >= self.min_time_steps]
         
         pt_ids = df["PatientId"].unique()
-        # random.shuffle(pt_ids)
+        random.shuffle(pt_ids)
+        # print(pt_ids.tolist())
         df = df.set_index("PatientId").loc[pt_ids]
         return df
     def __get_data_split__(self,patient_ids:np.ndarray):
@@ -168,7 +188,7 @@ class PatientDataModule(LightningDataModule):
             pt_idx          = self.data_split_index[1],
             output_field    = self.output_field,
             
-            random_sample_from_each_pt = False,
+            random_sample_from_each_pt = self.random_sample_from_each_pt,
             equal_sample=self.equal_sample,
             time_steps_len = self.time_steps_len, 
             sampled_steps = self.sampled_steps
@@ -179,7 +199,7 @@ class PatientDataModule(LightningDataModule):
             output_field    = self.output_field,
             
             random_sample_from_each_pt = False,
-            equal_sample=self.equal_sample,
+            equal_sample=False,
             time_steps_len = self.time_steps_len, 
             sampled_steps = self.sampled_steps
         )
@@ -207,7 +227,7 @@ class PatientDataModule(LightningDataModule):
     def test_dataloader(self):
         return DataLoader(
             self.data_test,
-            batch_size=self.batch_size,
+            batch_size=1,
             num_workers=self.num_workers,
             drop_last=self.drop_last,
             pin_memory=self.pin_memory,

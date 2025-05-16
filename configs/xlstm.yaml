@@ -1,6 +1,6 @@
 data:
   root_path: '/root/data/'
-  data_path: 'unnorm_data.csv'
+  data_path: 'unnorm_data_reduced_v2.csv'
   output_field: 'Target'
   
   random_sample_from_each_pt: True
@@ -12,7 +12,7 @@ data:
   data_split: [0.7,0.1,0.2]
   scale: True
 
-  batch_size: 126
+  batch_size: 250
   num_workers: 3
   drop_last: False
   pin_memory: False
@@ -20,17 +20,17 @@ data:
 model:
   name: xLSTM
   params:
-    input_size: 170
+    input_size: 96
     in_len: *time_steps_len
     head_size: 16
-    num_heads: 4
-    layers: 'msm'
+    num_heads: 8
+    layers: 'msmsmsm'
     output_dim: 1
     batch_first: True
 
 training_param:
   warmup_epochs: 10
-  max_epochs: 50
+  max_epochs: 100
   warmup_start_lr: 1.0e-8
   eta_min: 1.0e-8
 
@@ -48,3 +48,6 @@ loss:
   - name: MSELoss
     params: {}
     weight: 1.
+  - name: StdReg
+    params: {}
+    weight: 1.0e-3

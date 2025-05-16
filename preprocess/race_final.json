@@ -1,0 +1,4596 @@
+[
+    {
+        "code": "1004-1",
+        "display": "American Indian",
+        "child_concept": [
+            {
+                "code": "1006-6",
+                "display": "Abenaki",
+                "child_concept": []
+            },
+            {
+                "code": "1008-2",
+                "display": "Algonquian",
+                "child_concept": []
+            },
+            {
+                "code": "1010-8",
+                "display": "Apache",
+                "child_concept": []
+            },
+            {
+                "code": "1021-5",
+                "display": "Arapaho",
+                "child_concept": []
+            },
+            {
+                "code": "1026-4",
+                "display": "Arikara",
+                "child_concept": []
+            },
+            {
+                "code": "1028-0",
+                "display": "Assiniboine",
+                "child_concept": []
+            },
+            {
+                "code": "1030-6",
+                "display": "Assiniboine Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1033-0",
+                "display": "Bannock",
+                "child_concept": []
+            },
+            {
+                "code": "1035-5",
+                "display": "Blackfeet",
+                "child_concept": []
+            },
+            {
+                "code": "1037-1",
+                "display": "Brotherton",
+                "child_concept": []
+            },
+            {
+                "code": "1039-7",
+                "display": "Burt Lake Band",
+                "child_concept": []
+            },
+            {
+                "code": "1041-3",
+                "display": "Caddo",
+                "child_concept": []
+            },
+            {
+                "code": "1044-7",
+                "display": "Cahuilla",
+                "child_concept": []
+            },
+            {
+                "code": "1053-8",
+                "display": "California Tribes",
+                "child_concept": []
+            },
+            {
+                "code": "1068-6",
+                "display": "Canadian and Latin American Indian",
+                "child_concept": []
+            },
+            {
+                "code": "1074-4",
+                "display": "Spanish American Indian",
+                "child_concept": []
+            },
+            {
+                "code": "1076-9",
+                "display": "Catawba",
+                "child_concept": []
+            },
+            {
+                "code": "1078-5",
+                "display": "Cayuse",
+                "child_concept": []
+            },
+            {
+                "code": "1080-1",
+                "display": "Chehalis",
+                "child_concept": []
+            },
+            {
+                "code": "1082-7",
+                "display": "Chemakuan",
+                "child_concept": []
+            },
+            {
+                "code": "1086-8",
+                "display": "Chemehuevi",
+                "child_concept": []
+            },
+            {
+                "code": "1088-4",
+                "display": "Cherokee",
+                "child_concept": []
+            },
+            {
+                "code": "1100-7",
+                "display": "Cherokee Shawnee",
+                "child_concept": []
+            },
+            {
+                "code": "1102-3",
+                "display": "Cheyenne",
+                "child_concept": []
+            },
+            {
+                "code": "1106-4",
+                "display": "Cheyenne-Arapaho",
+                "child_concept": []
+            },
+            {
+                "code": "1108-0",
+                "display": "Chickahominy",
+                "child_concept": []
+            },
+            {
+                "code": "1112-2",
+                "display": "Chickasaw",
+                "child_concept": []
+            },
+            {
+                "code": "1114-8",
+                "display": "Chinook",
+                "child_concept": []
+            },
+            {
+                "code": "1123-9",
+                "display": "Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1150-2",
+                "display": "Chippewa Cree",
+                "child_concept": []
+            },
+            {
+                "code": "1153-6",
+                "display": "Chitimacha",
+                "child_concept": []
+            },
+            {
+                "code": "1155-1",
+                "display": "Choctaw",
+                "child_concept": []
+            },
+            {
+                "code": "1162-7",
+                "display": "Chumash",
+                "child_concept": []
+            },
+            {
+                "code": "1165-0",
+                "display": "Clear Lake",
+                "child_concept": []
+            },
+            {
+                "code": "1167-6",
+                "display": "Coeur D'Alene",
+                "child_concept": []
+            },
+            {
+                "code": "1169-2",
+                "display": "Coharie",
+                "child_concept": []
+            },
+            {
+                "code": "1171-8",
+                "display": "Colorado River",
+                "child_concept": []
+            },
+            {
+                "code": "1173-4",
+                "display": "Colville",
+                "child_concept": []
+            },
+            {
+                "code": "1175-9",
+                "display": "Comanche",
+                "child_concept": []
+            },
+            {
+                "code": "1178-3",
+                "display": "Coos, Lower Umpqua, Siuslaw",
+                "child_concept": []
+            },
+            {
+                "code": "1180-9",
+                "display": "Coos",
+                "child_concept": []
+            },
+            {
+                "code": "1182-5",
+                "display": "Coquilles",
+                "child_concept": []
+            },
+            {
+                "code": "1184-1",
+                "display": "Costanoan",
+                "child_concept": []
+            },
+            {
+                "code": "1186-6",
+                "display": "Coushatta",
+                "child_concept": []
+            },
+            {
+                "code": "1189-0",
+                "display": "Cowlitz",
+                "child_concept": []
+            },
+            {
+                "code": "1191-6",
+                "display": "Cree",
+                "child_concept": []
+            },
+            {
+                "code": "1193-2",
+                "display": "Creek",
+                "child_concept": []
+            },
+            {
+                "code": "1207-0",
+                "display": "Croatan",
+                "child_concept": []
+            },
+            {
+                "code": "1209-6",
+                "display": "Crow",
+                "child_concept": []
+            },
+            {
+                "code": "1211-2",
+                "display": "Cupeno",
+                "child_concept": []
+            },
+            {
+                "code": "1214-6",
+                "display": "Delaware",
+                "child_concept": []
+            },
+            {
+                "code": "1222-9",
+                "display": "Diegueno",
+                "child_concept": []
+            },
+            {
+                "code": "1233-6",
+                "display": "Eastern Tribes",
+                "child_concept": []
+            },
+            {
+                "code": "1250-0",
+                "display": "Esselen",
+                "child_concept": []
+            },
+            {
+                "code": "1252-6",
+                "display": "Fort Belknap",
+                "child_concept": []
+            },
+            {
+                "code": "1254-2",
+                "display": "Fort Berthold",
+                "child_concept": []
+            },
+            {
+                "code": "1256-7",
+                "display": "Fort Mcdowell",
+                "child_concept": []
+            },
+            {
+                "code": "1258-3",
+                "display": "Fort Hall",
+                "child_concept": []
+            },
+            {
+                "code": "1260-9",
+                "display": "Gabrieleno",
+                "child_concept": []
+            },
+            {
+                "code": "1262-5",
+                "display": "Grand Ronde",
+                "child_concept": []
+            },
+            {
+                "code": "1264-1",
+                "display": "Gros Ventres",
+                "child_concept": []
+            },
+            {
+                "code": "1267-4",
+                "display": "Haliwa",
+                "child_concept": []
+            },
+            {
+                "code": "1269-0",
+                "display": "Hidatsa",
+                "child_concept": []
+            },
+            {
+                "code": "1271-6",
+                "display": "Hoopa",
+                "child_concept": []
+            },
+            {
+                "code": "1275-7",
+                "display": "Hoopa Extension",
+                "child_concept": []
+            },
+            {
+                "code": "1277-3",
+                "display": "Houma",
+                "child_concept": []
+            },
+            {
+                "code": "1279-9",
+                "display": "Inaja-Cosmit",
+                "child_concept": []
+            },
+            {
+                "code": "1281-5",
+                "display": "Iowa",
+                "child_concept": []
+            },
+            {
+                "code": "1285-6",
+                "display": "Iroquois",
+                "child_concept": []
+            },
+            {
+                "code": "1297-1",
+                "display": "Juaneno",
+                "child_concept": []
+            },
+            {
+                "code": "1299-7",
+                "display": "Kalispel",
+                "child_concept": []
+            },
+            {
+                "code": "1301-1",
+                "display": "Karuk",
+                "child_concept": []
+            },
+            {
+                "code": "1303-7",
+                "display": "Kaw",
+                "child_concept": []
+            },
+            {
+                "code": "1305-2",
+                "display": "Kickapoo",
+                "child_concept": []
+            },
+            {
+                "code": "1309-4",
+                "display": "Kiowa",
+                "child_concept": []
+            },
+            {
+                "code": "1312-8",
+                "display": "Klallam",
+                "child_concept": []
+            },
+            {
+                "code": "1317-7",
+                "display": "Klamath",
+                "child_concept": []
+            },
+            {
+                "code": "1319-3",
+                "display": "Konkow",
+                "child_concept": []
+            },
+            {
+                "code": "1321-9",
+                "display": "Kootenai",
+                "child_concept": []
+            },
+            {
+                "code": "1323-5",
+                "display": "Lassik",
+                "child_concept": []
+            },
+            {
+                "code": "1325-0",
+                "display": "Long Island",
+                "child_concept": []
+            },
+            {
+                "code": "1331-8",
+                "display": "Luiseno",
+                "child_concept": []
+            },
+            {
+                "code": "1340-9",
+                "display": "Lumbee",
+                "child_concept": []
+            },
+            {
+                "code": "1342-5",
+                "display": "Lummi",
+                "child_concept": []
+            },
+            {
+                "code": "1344-1",
+                "display": "Maidu",
+                "child_concept": []
+            },
+            {
+                "code": "1348-2",
+                "display": "Makah",
+                "child_concept": []
+            },
+            {
+                "code": "1350-8",
+                "display": "Maliseet",
+                "child_concept": []
+            },
+            {
+                "code": "1352-4",
+                "display": "Mandan",
+                "child_concept": []
+            },
+            {
+                "code": "1354-0",
+                "display": "Mattaponi",
+                "child_concept": []
+            },
+            {
+                "code": "1356-5",
+                "display": "Menominee",
+                "child_concept": []
+            },
+            {
+                "code": "1358-1",
+                "display": "Miami",
+                "child_concept": []
+            },
+            {
+                "code": "1363-1",
+                "display": "Miccosukee",
+                "child_concept": []
+            },
+            {
+                "code": "1365-6",
+                "display": "Micmac",
+                "child_concept": []
+            },
+            {
+                "code": "1368-0",
+                "display": "Mission Indians",
+                "child_concept": []
+            },
+            {
+                "code": "1370-6",
+                "display": "Miwok",
+                "child_concept": []
+            },
+            {
+                "code": "1372-2",
+                "display": "Modoc",
+                "child_concept": []
+            },
+            {
+                "code": "1374-8",
+                "display": "Mohegan",
+                "child_concept": []
+            },
+            {
+                "code": "1376-3",
+                "display": "Mono",
+                "child_concept": []
+            },
+            {
+                "code": "1378-9",
+                "display": "Nanticoke",
+                "child_concept": []
+            },
+            {
+                "code": "1380-5",
+                "display": "Narragansett",
+                "child_concept": []
+            },
+            {
+                "code": "1382-1",
+                "display": "Navajo",
+                "child_concept": []
+            },
+            {
+                "code": "1387-0",
+                "display": "Nez Perce",
+                "child_concept": []
+            },
+            {
+                "code": "1389-6",
+                "display": "Nomalaki",
+                "child_concept": []
+            },
+            {
+                "code": "1391-2",
+                "display": "Northwest Tribes",
+                "child_concept": []
+            },
+            {
+                "code": "1403-5",
+                "display": "Omaha",
+                "child_concept": []
+            },
+            {
+                "code": "1405-0",
+                "display": "Oregon Athabaskan",
+                "child_concept": []
+            },
+            {
+                "code": "1407-6",
+                "display": "Osage",
+                "child_concept": []
+            },
+            {
+                "code": "1409-2",
+                "display": "Otoe-Missouria",
+                "child_concept": []
+            },
+            {
+                "code": "1411-8",
+                "display": "Ottawa",
+                "child_concept": []
+            },
+            {
+                "code": "1416-7",
+                "display": "Paiute",
+                "child_concept": []
+            },
+            {
+                "code": "1439-9",
+                "display": "Pamunkey",
+                "child_concept": []
+            },
+            {
+                "code": "1441-5",
+                "display": "Passamaquoddy",
+                "child_concept": []
+            },
+            {
+                "code": "1445-6",
+                "display": "Pawnee",
+                "child_concept": []
+            },
+            {
+                "code": "1448-0",
+                "display": "Penobscot",
+                "child_concept": []
+            },
+            {
+                "code": "1450-6",
+                "display": "Peoria",
+                "child_concept": []
+            },
+            {
+                "code": "1453-0",
+                "display": "Pequot",
+                "child_concept": []
+            },
+            {
+                "code": "1456-3",
+                "display": "Pima",
+                "child_concept": []
+            },
+            {
+                "code": "1460-5",
+                "display": "Piscataway",
+                "child_concept": []
+            },
+            {
+                "code": "1462-1",
+                "display": "Pit River",
+                "child_concept": []
+            },
+            {
+                "code": "1464-7",
+                "display": "Pomo",
+                "child_concept": []
+            },
+            {
+                "code": "1474-6",
+                "display": "Ponca",
+                "child_concept": []
+            },
+            {
+                "code": "1478-7",
+                "display": "Potawatomi",
+                "child_concept": []
+            },
+            {
+                "code": "1487-8",
+                "display": "Powhatan",
+                "child_concept": []
+            },
+            {
+                "code": "1489-4",
+                "display": "Pueblo",
+                "child_concept": []
+            },
+            {
+                "code": "1518-0",
+                "display": "Puget Sound Salish",
+                "child_concept": []
+            },
+            {
+                "code": "1541-2",
+                "display": "Quapaw",
+                "child_concept": []
+            },
+            {
+                "code": "1543-8",
+                "display": "Quinault",
+                "child_concept": []
+            },
+            {
+                "code": "1545-3",
+                "display": "Rappahannock",
+                "child_concept": []
+            },
+            {
+                "code": "1547-9",
+                "display": "Reno-Sparks",
+                "child_concept": []
+            },
+            {
+                "code": "1549-5",
+                "display": "Round Valley",
+                "child_concept": []
+            },
+            {
+                "code": "1551-1",
+                "display": "Sac and Fox",
+                "child_concept": []
+            },
+            {
+                "code": "1556-0",
+                "display": "Salinan",
+                "child_concept": []
+            },
+            {
+                "code": "1558-6",
+                "display": "Salish",
+                "child_concept": []
+            },
+            {
+                "code": "1560-2",
+                "display": "Salish and Kootenai",
+                "child_concept": []
+            },
+            {
+                "code": "1562-8",
+                "display": "Schaghticoke",
+                "child_concept": []
+            },
+            {
+                "code": "1564-4",
+                "display": "Scott Valley",
+                "child_concept": []
+            },
+            {
+                "code": "1566-9",
+                "display": "Seminole",
+                "child_concept": []
+            },
+            {
+                "code": "1573-5",
+                "display": "Serrano",
+                "child_concept": []
+            },
+            {
+                "code": "1576-8",
+                "display": "Shasta",
+                "child_concept": []
+            },
+            {
+                "code": "1578-4",
+                "display": "Shawnee",
+                "child_concept": []
+            },
+            {
+                "code": "1582-6",
+                "display": "Shinnecock",
+                "child_concept": []
+            },
+            {
+                "code": "1584-2",
+                "display": "Shoalwater Bay",
+                "child_concept": []
+            },
+            {
+                "code": "1586-7",
+                "display": "Shoshone",
+                "child_concept": []
+            },
+            {
+                "code": "1602-2",
+                "display": "Shoshone Paiute",
+                "child_concept": []
+            },
+            {
+                "code": "1607-1",
+                "display": "Siletz",
+                "child_concept": []
+            },
+            {
+                "code": "1609-7",
+                "display": "Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1643-6",
+                "display": "Siuslaw",
+                "child_concept": []
+            },
+            {
+                "code": "1645-1",
+                "display": "Spokane",
+                "child_concept": []
+            },
+            {
+                "code": "1647-7",
+                "display": "Stewart",
+                "child_concept": []
+            },
+            {
+                "code": "1649-3",
+                "display": "Stockbridge",
+                "child_concept": []
+            },
+            {
+                "code": "1651-9",
+                "display": "Susanville",
+                "child_concept": []
+            },
+            {
+                "code": "1653-5",
+                "display": "Tohono O'Odham",
+                "child_concept": []
+            },
+            {
+                "code": "1659-2",
+                "display": "Tolowa",
+                "child_concept": []
+            },
+            {
+                "code": "1661-8",
+                "display": "Tonkawa",
+                "child_concept": []
+            },
+            {
+                "code": "1663-4",
+                "display": "Tygh",
+                "child_concept": []
+            },
+            {
+                "code": "1665-9",
+                "display": "Umatilla",
+                "child_concept": []
+            },
+            {
+                "code": "1667-5",
+                "display": "Umpqua",
+                "child_concept": []
+            },
+            {
+                "code": "1670-9",
+                "display": "Ute",
+                "child_concept": []
+            },
+            {
+                "code": "1675-8",
+                "display": "Wailaki",
+                "child_concept": []
+            },
+            {
+                "code": "1677-4",
+                "display": "Walla-Walla",
+                "child_concept": []
+            },
+            {
+                "code": "1679-0",
+                "display": "Wampanoag",
+                "child_concept": []
+            },
+            {
+                "code": "1683-2",
+                "display": "Warm Springs",
+                "child_concept": []
+            },
+            {
+                "code": "1685-7",
+                "display": "Wascopum",
+                "child_concept": []
+            },
+            {
+                "code": "1687-3",
+                "display": "Washoe",
+                "child_concept": []
+            },
+            {
+                "code": "1692-3",
+                "display": "Wichita",
+                "child_concept": []
+            },
+            {
+                "code": "1694-9",
+                "display": "Wind River",
+                "child_concept": []
+            },
+            {
+                "code": "1696-4",
+                "display": "Winnebago",
+                "child_concept": []
+            },
+            {
+                "code": "1700-4",
+                "display": "Winnemucca",
+                "child_concept": []
+            },
+            {
+                "code": "1702-0",
+                "display": "Wintun",
+                "child_concept": []
+            },
+            {
+                "code": "1704-6",
+                "display": "Wiyot",
+                "child_concept": []
+            },
+            {
+                "code": "1707-9",
+                "display": "Yakama",
+                "child_concept": []
+            },
+            {
+                "code": "1709-5",
+                "display": "Yakama Cowlitz",
+                "child_concept": []
+            },
+            {
+                "code": "1711-1",
+                "display": "Yaqui",
+                "child_concept": []
+            },
+            {
+                "code": "1715-2",
+                "display": "Yavapai Apache",
+                "child_concept": []
+            },
+            {
+                "code": "1717-8",
+                "display": "Yokuts",
+                "child_concept": []
+            },
+            {
+                "code": "1722-8",
+                "display": "Yuchi",
+                "child_concept": []
+            },
+            {
+                "code": "1724-4",
+                "display": "Yuman",
+                "child_concept": []
+            },
+            {
+                "code": "1732-7",
+                "display": "Yurok",
+                "child_concept": []
+            },
+            {
+                "code": "1011-6",
+                "display": "Chiricahua",
+                "child_concept": []
+            },
+            {
+                "code": "1012-4",
+                "display": "Fort Sill Apache",
+                "child_concept": []
+            },
+            {
+                "code": "1013-2",
+                "display": "Jicarilla Apache",
+                "child_concept": []
+            },
+            {
+                "code": "1014-0",
+                "display": "Lipan Apache",
+                "child_concept": []
+            },
+            {
+                "code": "1015-7",
+                "display": "Mescalero Apache",
+                "child_concept": []
+            },
+            {
+                "code": "1016-5",
+                "display": "Oklahoma Apache",
+                "child_concept": []
+            },
+            {
+                "code": "1017-3",
+                "display": "Payson Apache",
+                "child_concept": []
+            },
+            {
+                "code": "1018-1",
+                "display": "San Carlos Apache",
+                "child_concept": []
+            },
+            {
+                "code": "1019-9",
+                "display": "White Mountain Apache",
+                "child_concept": []
+            },
+            {
+                "code": "1022-3",
+                "display": "Northern Arapaho",
+                "child_concept": []
+            },
+            {
+                "code": "1023-1",
+                "display": "Southern Arapaho",
+                "child_concept": []
+            },
+            {
+                "code": "1024-9",
+                "display": "Wind River Arapaho",
+                "child_concept": []
+            },
+            {
+                "code": "1031-4",
+                "display": "Fort Peck Assiniboine Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1042-1",
+                "display": "Oklahoma Cado",
+                "child_concept": []
+            },
+            {
+                "code": "1045-4",
+                "display": "Agua Caliente Cahuilla",
+                "child_concept": []
+            },
+            {
+                "code": "1046-2",
+                "display": "Augustine",
+                "child_concept": []
+            },
+            {
+                "code": "1047-0",
+                "display": "Cabazon",
+                "child_concept": []
+            },
+            {
+                "code": "1048-8",
+                "display": "Los Coyotes",
+                "child_concept": []
+            },
+            {
+                "code": "1049-6",
+                "display": "Morongo",
+                "child_concept": []
+            },
+            {
+                "code": "1050-4",
+                "display": "Santa Rosa Cahuilla",
+                "child_concept": []
+            },
+            {
+                "code": "1051-2",
+                "display": "Torres-Martinez",
+                "child_concept": []
+            },
+            {
+                "code": "1054-6",
+                "display": "Cahto",
+                "child_concept": []
+            },
+            {
+                "code": "1055-3",
+                "display": "Chimariko",
+                "child_concept": []
+            },
+            {
+                "code": "1056-1",
+                "display": "Coast Miwok",
+                "child_concept": []
+            },
+            {
+                "code": "1057-9",
+                "display": "Digger",
+                "child_concept": []
+            },
+            {
+                "code": "1058-7",
+                "display": "Kawaiisu",
+                "child_concept": []
+            },
+            {
+                "code": "1059-5",
+                "display": "Kern River",
+                "child_concept": []
+            },
+            {
+                "code": "1060-3",
+                "display": "Mattole",
+                "child_concept": []
+            },
+            {
+                "code": "1061-1",
+                "display": "Red Wood",
+                "child_concept": []
+            },
+            {
+                "code": "1062-9",
+                "display": "Santa Rosa",
+                "child_concept": []
+            },
+            {
+                "code": "1063-7",
+                "display": "Takelma",
+                "child_concept": []
+            },
+            {
+                "code": "1064-5",
+                "display": "Wappo",
+                "child_concept": []
+            },
+            {
+                "code": "1065-2",
+                "display": "Yana",
+                "child_concept": []
+            },
+            {
+                "code": "1066-0",
+                "display": "Yuki",
+                "child_concept": []
+            },
+            {
+                "code": "1069-4",
+                "display": "Canadian Indian",
+                "child_concept": []
+            },
+            {
+                "code": "1070-2",
+                "display": "Central American Indian",
+                "child_concept": []
+            },
+            {
+                "code": "1071-0",
+                "display": "French American Indian",
+                "child_concept": []
+            },
+            {
+                "code": "1072-8",
+                "display": "Mexican American Indian",
+                "child_concept": []
+            },
+            {
+                "code": "1073-6",
+                "display": "South American Indian",
+                "child_concept": []
+            },
+            {
+                "code": "1741-8",
+                "display": "Alatna",
+                "child_concept": []
+            },
+            {
+                "code": "1742-6",
+                "display": "Alexander",
+                "child_concept": []
+            },
+            {
+                "code": "1743-4",
+                "display": "Allakaket",
+                "child_concept": []
+            },
+            {
+                "code": "1744-2",
+                "display": "Alanvik",
+                "child_concept": []
+            },
+            {
+                "code": "1745-9",
+                "display": "Anvik",
+                "child_concept": []
+            },
+            {
+                "code": "1746-7",
+                "display": "Arctic",
+                "child_concept": []
+            },
+            {
+                "code": "1747-5",
+                "display": "Beaver",
+                "child_concept": []
+            },
+            {
+                "code": "1748-3",
+                "display": "Birch Creek",
+                "child_concept": []
+            },
+            {
+                "code": "1749-1",
+                "display": "Cantwell",
+                "child_concept": []
+            },
+            {
+                "code": "1750-9",
+                "display": "Chalkyitsik",
+                "child_concept": []
+            },
+            {
+                "code": "1751-7",
+                "display": "Chickaloon",
+                "child_concept": []
+            },
+            {
+                "code": "1752-5",
+                "display": "Chistochina",
+                "child_concept": []
+            },
+            {
+                "code": "1753-3",
+                "display": "Chitina",
+                "child_concept": []
+            },
+            {
+                "code": "1754-1",
+                "display": "Circle",
+                "child_concept": []
+            },
+            {
+                "code": "1755-8",
+                "display": "Cook Inlet",
+                "child_concept": []
+            },
+            {
+                "code": "1756-6",
+                "display": "Copper Center",
+                "child_concept": []
+            },
+            {
+                "code": "1757-4",
+                "display": "Copper River",
+                "child_concept": []
+            },
+            {
+                "code": "1758-2",
+                "display": "Dot Lake",
+                "child_concept": []
+            },
+            {
+                "code": "1759-0",
+                "display": "Doyon",
+                "child_concept": []
+            },
+            {
+                "code": "1760-8",
+                "display": "Eagle",
+                "child_concept": []
+            },
+            {
+                "code": "1761-6",
+                "display": "Eklutna",
+                "child_concept": []
+            },
+            {
+                "code": "1762-4",
+                "display": "Evansville",
+                "child_concept": []
+            },
+            {
+                "code": "1763-2",
+                "display": "Fort Yukon",
+                "child_concept": []
+            },
+            {
+                "code": "1764-0",
+                "display": "Gakona",
+                "child_concept": []
+            },
+            {
+                "code": "1765-7",
+                "display": "Galena",
+                "child_concept": []
+            },
+            {
+                "code": "1766-5",
+                "display": "Grayling",
+                "child_concept": []
+            },
+            {
+                "code": "1767-3",
+                "display": "Gulkana",
+                "child_concept": []
+            },
+            {
+                "code": "1768-1",
+                "display": "Healy Lake",
+                "child_concept": []
+            },
+            {
+                "code": "1769-9",
+                "display": "Holy Cross",
+                "child_concept": []
+            },
+            {
+                "code": "1770-7",
+                "display": "Hughes",
+                "child_concept": []
+            },
+            {
+                "code": "1771-5",
+                "display": "Huslia",
+                "child_concept": []
+            },
+            {
+                "code": "1772-3",
+                "display": "Iliamna",
+                "child_concept": []
+            },
+            {
+                "code": "1773-1",
+                "display": "Kaltag",
+                "child_concept": []
+            },
+            {
+                "code": "1774-9",
+                "display": "Kluti Kaah",
+                "child_concept": []
+            },
+            {
+                "code": "1775-6",
+                "display": "Knik",
+                "child_concept": []
+            },
+            {
+                "code": "1776-4",
+                "display": "Koyukuk",
+                "child_concept": []
+            },
+            {
+                "code": "1777-2",
+                "display": "Lake Minchumina",
+                "child_concept": []
+            },
+            {
+                "code": "1778-0",
+                "display": "Lime",
+                "child_concept": []
+            },
+            {
+                "code": "1779-8",
+                "display": "Mcgrath",
+                "child_concept": []
+            },
+            {
+                "code": "1780-6",
+                "display": "Manley Hot Springs",
+                "child_concept": []
+            },
+            {
+                "code": "1781-4",
+                "display": "Mentasta Lake",
+                "child_concept": []
+            },
+            {
+                "code": "1782-2",
+                "display": "Minto",
+                "child_concept": []
+            },
+            {
+                "code": "1783-0",
+                "display": "Nenana",
+                "child_concept": []
+            },
+            {
+                "code": "1784-8",
+                "display": "Nikolai",
+                "child_concept": []
+            },
+            {
+                "code": "1785-5",
+                "display": "Ninilchik",
+                "child_concept": []
+            },
+            {
+                "code": "1786-3",
+                "display": "Nondalton",
+                "child_concept": []
+            },
+            {
+                "code": "1787-1",
+                "display": "Northway",
+                "child_concept": []
+            },
+            {
+                "code": "1788-9",
+                "display": "Nulato",
+                "child_concept": []
+            },
+            {
+                "code": "1789-7",
+                "display": "Pedro Bay",
+                "child_concept": []
+            },
+            {
+                "code": "1790-5",
+                "display": "Rampart",
+                "child_concept": []
+            },
+            {
+                "code": "1791-3",
+                "display": "Ruby",
+                "child_concept": []
+            },
+            {
+                "code": "1792-1",
+                "display": "Salamatof",
+                "child_concept": []
+            },
+            {
+                "code": "1793-9",
+                "display": "Seldovia",
+                "child_concept": []
+            },
+            {
+                "code": "1794-7",
+                "display": "Slana",
+                "child_concept": []
+            },
+            {
+                "code": "1795-4",
+                "display": "Shageluk",
+                "child_concept": []
+            },
+            {
+                "code": "1796-2",
+                "display": "Stevens",
+                "child_concept": []
+            },
+            {
+                "code": "1797-0",
+                "display": "Stony River",
+                "child_concept": []
+            },
+            {
+                "code": "1798-8",
+                "display": "Takotna",
+                "child_concept": []
+            },
+            {
+                "code": "1799-6",
+                "display": "Tanacross",
+                "child_concept": []
+            },
+            {
+                "code": "1800-2",
+                "display": "Tanaina",
+                "child_concept": []
+            },
+            {
+                "code": "1801-0",
+                "display": "Tanana",
+                "child_concept": []
+            },
+            {
+                "code": "1802-8",
+                "display": "Tanana Chiefs",
+                "child_concept": []
+            },
+            {
+                "code": "1803-6",
+                "display": "Tazlina",
+                "child_concept": []
+            },
+            {
+                "code": "1804-4",
+                "display": "Telida",
+                "child_concept": []
+            },
+            {
+                "code": "1805-1",
+                "display": "Tetlin",
+                "child_concept": []
+            },
+            {
+                "code": "1806-9",
+                "display": "Tok",
+                "child_concept": []
+            },
+            {
+                "code": "1807-7",
+                "display": "Tyonek",
+                "child_concept": []
+            },
+            {
+                "code": "1808-5",
+                "display": "Venetie",
+                "child_concept": []
+            },
+            {
+                "code": "1809-3",
+                "display": "Wiseman",
+                "child_concept": []
+            },
+            {
+                "code": "1083-5",
+                "display": "Hoh",
+                "child_concept": []
+            },
+            {
+                "code": "1084-3",
+                "display": "Quileute",
+                "child_concept": []
+            },
+            {
+                "code": "1089-2",
+                "display": "Cherokee Alabama",
+                "child_concept": []
+            },
+            {
+                "code": "1090-0",
+                "display": "Cherokees of Northeast Alabama",
+                "child_concept": []
+            },
+            {
+                "code": "1091-8",
+                "display": "Cherokees of Southeast Alabama",
+                "child_concept": []
+            },
+            {
+                "code": "1092-6",
+                "display": "Eastern Cherokee",
+                "child_concept": []
+            },
+            {
+                "code": "1093-4",
+                "display": "Echota Cherokee",
+                "child_concept": []
+            },
+            {
+                "code": "1094-2",
+                "display": "Etowah Cherokee",
+                "child_concept": []
+            },
+            {
+                "code": "1095-9",
+                "display": "Northern Cherokee",
+                "child_concept": []
+            },
+            {
+                "code": "1096-7",
+                "display": "Tuscola",
+                "child_concept": []
+            },
+            {
+                "code": "1097-5",
+                "display": "United Keetowah Band of Cherokee",
+                "child_concept": []
+            },
+            {
+                "code": "1098-3",
+                "display": "Western Cherokee",
+                "child_concept": []
+            },
+            {
+                "code": "1103-1",
+                "display": "Northern Cheyenne",
+                "child_concept": []
+            },
+            {
+                "code": "1104-9",
+                "display": "Southern Cheyenne",
+                "child_concept": []
+            },
+            {
+                "code": "1109-8",
+                "display": "Eastern Chickahominy",
+                "child_concept": []
+            },
+            {
+                "code": "1110-6",
+                "display": "Western Chickahominy",
+                "child_concept": []
+            },
+            {
+                "code": "1115-5",
+                "display": "Clatsop",
+                "child_concept": []
+            },
+            {
+                "code": "1116-3",
+                "display": "Columbia River Chinook",
+                "child_concept": []
+            },
+            {
+                "code": "1117-1",
+                "display": "Kathlamet",
+                "child_concept": []
+            },
+            {
+                "code": "1118-9",
+                "display": "Upper Chinook",
+                "child_concept": []
+            },
+            {
+                "code": "1119-7",
+                "display": "Wakiakum Chinook",
+                "child_concept": []
+            },
+            {
+                "code": "1120-5",
+                "display": "Willapa Chinook",
+                "child_concept": []
+            },
+            {
+                "code": "1121-3",
+                "display": "Wishram",
+                "child_concept": []
+            },
+            {
+                "code": "1124-7",
+                "display": "Bad River",
+                "child_concept": []
+            },
+            {
+                "code": "1125-4",
+                "display": "Bay Mills Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1126-2",
+                "display": "Bois Forte",
+                "child_concept": []
+            },
+            {
+                "code": "1127-0",
+                "display": "Burt Lake Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1128-8",
+                "display": "Fond du Lac",
+                "child_concept": []
+            },
+            {
+                "code": "1129-6",
+                "display": "Grand Portage",
+                "child_concept": []
+            },
+            {
+                "code": "1130-4",
+                "display": "Grand Traverse Band of Ottawa-Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1131-2",
+                "display": "Keweenaw",
+                "child_concept": []
+            },
+            {
+                "code": "1132-0",
+                "display": "Lac Courte Oreilles",
+                "child_concept": []
+            },
+            {
+                "code": "1133-8",
+                "display": "Lac du Flambeau",
+                "child_concept": []
+            },
+            {
+                "code": "1134-6",
+                "display": "Lac Vieux Desert Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1135-3",
+                "display": "Lake Superior",
+                "child_concept": []
+            },
+            {
+                "code": "1136-1",
+                "display": "Leech Lake",
+                "child_concept": []
+            },
+            {
+                "code": "1137-9",
+                "display": "Little Shell Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1138-7",
+                "display": "Mille Lacs",
+                "child_concept": []
+            },
+            {
+                "code": "1139-5",
+                "display": "Minnesota Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1140-3",
+                "display": "Ontonagon",
+                "child_concept": []
+            },
+            {
+                "code": "1141-1",
+                "display": "Red Cliff Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1142-9",
+                "display": "Red Lake Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1143-7",
+                "display": "Saginaw Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1144-5",
+                "display": "St. Croix Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1145-2",
+                "display": "Sault Ste. Marie Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1146-0",
+                "display": "Sokoagon Chippewa",
+                "child_concept": []
+            },
+            {
+                "code": "1147-8",
+                "display": "Turtle Mountain",
+                "child_concept": []
+            },
+            {
+                "code": "1148-6",
+                "display": "White Earth",
+                "child_concept": []
+            },
+            {
+                "code": "1151-0",
+                "display": "Rocky Boy's Chippewa Cree",
+                "child_concept": []
+            },
+            {
+                "code": "1156-9",
+                "display": "Clifton Choctaw",
+                "child_concept": []
+            },
+            {
+                "code": "1157-7",
+                "display": "Jena Choctaw",
+                "child_concept": []
+            },
+            {
+                "code": "1158-5",
+                "display": "Mississippi Choctaw",
+                "child_concept": []
+            },
+            {
+                "code": "1159-3",
+                "display": "Mowa Band of Choctaw",
+                "child_concept": []
+            },
+            {
+                "code": "1160-1",
+                "display": "Oklahoma Choctaw",
+                "child_concept": []
+            },
+            {
+                "code": "1163-5",
+                "display": "Santa Ynez",
+                "child_concept": []
+            },
+            {
+                "code": "1176-7",
+                "display": "Oklahoma Comanche",
+                "child_concept": []
+            },
+            {
+                "code": "1187-4",
+                "display": "Alabama Coushatta",
+                "child_concept": []
+            },
+            {
+                "code": "1194-0",
+                "display": "Alabama Creek",
+                "child_concept": []
+            },
+            {
+                "code": "1195-7",
+                "display": "Alabama Quassarte",
+                "child_concept": []
+            },
+            {
+                "code": "1196-5",
+                "display": "Eastern Creek",
+                "child_concept": []
+            },
+            {
+                "code": "1197-3",
+                "display": "Eastern Muscogee",
+                "child_concept": []
+            },
+            {
+                "code": "1198-1",
+                "display": "Kialegee",
+                "child_concept": []
+            },
+            {
+                "code": "1199-9",
+                "display": "Lower Muscogee",
+                "child_concept": []
+            },
+            {
+                "code": "1200-5",
+                "display": "Machis Lower Creek Indian",
+                "child_concept": []
+            },
+            {
+                "code": "1201-3",
+                "display": "Poarch Band",
+                "child_concept": []
+            },
+            {
+                "code": "1202-1",
+                "display": "Principal Creek Indian Nation",
+                "child_concept": []
+            },
+            {
+                "code": "1203-9",
+                "display": "Star Clan of Muscogee Creeks",
+                "child_concept": []
+            },
+            {
+                "code": "1204-7",
+                "display": "Thlopthlocco",
+                "child_concept": []
+            },
+            {
+                "code": "1205-4",
+                "display": "Tuckabachee",
+                "child_concept": []
+            },
+            {
+                "code": "1212-0",
+                "display": "Agua Caliente",
+                "child_concept": []
+            },
+            {
+                "code": "1215-3",
+                "display": "Eastern Delaware",
+                "child_concept": []
+            },
+            {
+                "code": "1216-1",
+                "display": "Lenni-Lenape",
+                "child_concept": []
+            },
+            {
+                "code": "1217-9",
+                "display": "Munsee",
+                "child_concept": []
+            },
+            {
+                "code": "1218-7",
+                "display": "Oklahoma Delaware",
+                "child_concept": []
+            },
+            {
+                "code": "1219-5",
+                "display": "Rampough Mountain",
+                "child_concept": []
+            },
+            {
+                "code": "1220-3",
+                "display": "Sand Hill",
+                "child_concept": []
+            },
+            {
+                "code": "1223-7",
+                "display": "Campo",
+                "child_concept": []
+            },
+            {
+                "code": "1224-5",
+                "display": "Capitan Grande",
+                "child_concept": []
+            },
+            {
+                "code": "1225-2",
+                "display": "Cuyapaipe",
+                "child_concept": []
+            },
+            {
+                "code": "1226-0",
+                "display": "La Posta",
+                "child_concept": []
+            },
+            {
+                "code": "1227-8",
+                "display": "Manzanita",
+                "child_concept": []
+            },
+            {
+                "code": "1228-6",
+                "display": "Mesa Grande",
+                "child_concept": []
+            },
+            {
+                "code": "1229-4",
+                "display": "San Pasqual",
+                "child_concept": []
+            },
+            {
+                "code": "1230-2",
+                "display": "Santa Ysabel",
+                "child_concept": []
+            },
+            {
+                "code": "1231-0",
+                "display": "Sycuan",
+                "child_concept": []
+            },
+            {
+                "code": "1234-4",
+                "display": "Attacapa",
+                "child_concept": []
+            },
+            {
+                "code": "1235-1",
+                "display": "Biloxi",
+                "child_concept": []
+            },
+            {
+                "code": "1236-9",
+                "display": "Georgetown",
+                "child_concept": []
+            },
+            {
+                "code": "1237-7",
+                "display": "Moor",
+                "child_concept": []
+            },
+            {
+                "code": "1238-5",
+                "display": "Nansemond",
+                "child_concept": []
+            },
+            {
+                "code": "1239-3",
+                "display": "Natchez",
+                "child_concept": []
+            },
+            {
+                "code": "1240-1",
+                "display": "Nausu Waiwash",
+                "child_concept": []
+            },
+            {
+                "code": "1241-9",
+                "display": "Nipmuc",
+                "child_concept": []
+            },
+            {
+                "code": "1242-7",
+                "display": "Paugussett",
+                "child_concept": []
+            },
+            {
+                "code": "1243-5",
+                "display": "Pocomoke Acohonock",
+                "child_concept": []
+            },
+            {
+                "code": "1244-3",
+                "display": "Southeastern Indians",
+                "child_concept": []
+            },
+            {
+                "code": "1245-0",
+                "display": "Susquehanock",
+                "child_concept": []
+            },
+            {
+                "code": "1246-8",
+                "display": "Tunica Biloxi",
+                "child_concept": []
+            },
+            {
+                "code": "1247-6",
+                "display": "Waccamaw-Siousan",
+                "child_concept": []
+            },
+            {
+                "code": "1248-4",
+                "display": "Wicomico",
+                "child_concept": []
+            },
+            {
+                "code": "1265-8",
+                "display": "Atsina",
+                "child_concept": []
+            },
+            {
+                "code": "1272-4",
+                "display": "Trinity",
+                "child_concept": []
+            },
+            {
+                "code": "1273-2",
+                "display": "Whilkut",
+                "child_concept": []
+            },
+            {
+                "code": "1282-3",
+                "display": "Iowa of Kansas-Nebraska",
+                "child_concept": []
+            },
+            {
+                "code": "1283-1",
+                "display": "Iowa of Oklahoma",
+                "child_concept": []
+            },
+            {
+                "code": "1286-4",
+                "display": "Cayuga",
+                "child_concept": []
+            },
+            {
+                "code": "1287-2",
+                "display": "Mohawk",
+                "child_concept": []
+            },
+            {
+                "code": "1288-0",
+                "display": "Oneida",
+                "child_concept": []
+            },
+            {
+                "code": "1289-8",
+                "display": "Onondaga",
+                "child_concept": []
+            },
+            {
+                "code": "1290-6",
+                "display": "Seneca",
+                "child_concept": []
+            },
+            {
+                "code": "1291-4",
+                "display": "Seneca Nation",
+                "child_concept": []
+            },
+            {
+                "code": "1292-2",
+                "display": "Seneca-Cayuga",
+                "child_concept": []
+            },
+            {
+                "code": "1293-0",
+                "display": "Tonawanda Seneca",
+                "child_concept": []
+            },
+            {
+                "code": "1294-8",
+                "display": "Tuscarora",
+                "child_concept": []
+            },
+            {
+                "code": "1295-5",
+                "display": "Wyandotte",
+                "child_concept": []
+            },
+            {
+                "code": "1306-0",
+                "display": "Oklahoma Kickapoo",
+                "child_concept": []
+            },
+            {
+                "code": "1307-8",
+                "display": "Texas Kickapoo",
+                "child_concept": []
+            },
+            {
+                "code": "1310-2",
+                "display": "Oklahoma Kiowa",
+                "child_concept": []
+            },
+            {
+                "code": "1313-6",
+                "display": "Jamestown",
+                "child_concept": []
+            },
+            {
+                "code": "1314-4",
+                "display": "Lower Elwha",
+                "child_concept": []
+            },
+            {
+                "code": "1315-1",
+                "display": "Port Gamble Klallam",
+                "child_concept": []
+            },
+            {
+                "code": "1326-8",
+                "display": "Matinecock",
+                "child_concept": []
+            },
+            {
+                "code": "1327-6",
+                "display": "Montauk",
+                "child_concept": []
+            },
+            {
+                "code": "1328-4",
+                "display": "Poospatuck",
+                "child_concept": []
+            },
+            {
+                "code": "1329-2",
+                "display": "Setauket",
+                "child_concept": []
+            },
+            {
+                "code": "1332-6",
+                "display": "La Jolla",
+                "child_concept": []
+            },
+            {
+                "code": "1333-4",
+                "display": "Pala",
+                "child_concept": []
+            },
+            {
+                "code": "1334-2",
+                "display": "Pauma",
+                "child_concept": []
+            },
+            {
+                "code": "1335-9",
+                "display": "Pechanga",
+                "child_concept": []
+            },
+            {
+                "code": "1336-7",
+                "display": "Soboba",
+                "child_concept": []
+            },
+            {
+                "code": "1337-5",
+                "display": "Twenty-Nine Palms",
+                "child_concept": []
+            },
+            {
+                "code": "1338-3",
+                "display": "Temecula",
+                "child_concept": []
+            },
+            {
+                "code": "1345-8",
+                "display": "Mountain Maidu",
+                "child_concept": []
+            },
+            {
+                "code": "1346-6",
+                "display": "Nishinam",
+                "child_concept": []
+            },
+            {
+                "code": "1359-9",
+                "display": "Illinois Miami",
+                "child_concept": []
+            },
+            {
+                "code": "1360-7",
+                "display": "Indiana Miami",
+                "child_concept": []
+            },
+            {
+                "code": "1361-5",
+                "display": "Oklahoma Miami",
+                "child_concept": []
+            },
+            {
+                "code": "1366-4",
+                "display": "Aroostook",
+                "child_concept": []
+            },
+            {
+                "code": "1383-9",
+                "display": "Alamo Navajo",
+                "child_concept": []
+            },
+            {
+                "code": "1384-7",
+                "display": "Canoncito Navajo",
+                "child_concept": []
+            },
+            {
+                "code": "1385-4",
+                "display": "Ramah Navajo",
+                "child_concept": []
+            },
+            {
+                "code": "1392-0",
+                "display": "Alsea",
+                "child_concept": []
+            },
+            {
+                "code": "1393-8",
+                "display": "Celilo",
+                "child_concept": []
+            },
+            {
+                "code": "1394-6",
+                "display": "Columbia",
+                "child_concept": []
+            },
+            {
+                "code": "1395-3",
+                "display": "Kalapuya",
+                "child_concept": []
+            },
+            {
+                "code": "1396-1",
+                "display": "Molala",
+                "child_concept": []
+            },
+            {
+                "code": "1397-9",
+                "display": "Talakamish",
+                "child_concept": []
+            },
+            {
+                "code": "1398-7",
+                "display": "Tenino",
+                "child_concept": []
+            },
+            {
+                "code": "1399-5",
+                "display": "Tillamook",
+                "child_concept": []
+            },
+            {
+                "code": "1400-1",
+                "display": "Wenatchee",
+                "child_concept": []
+            },
+            {
+                "code": "1401-9",
+                "display": "Yahooskin",
+                "child_concept": []
+            },
+            {
+                "code": "1412-6",
+                "display": "Burt Lake Ottawa",
+                "child_concept": []
+            },
+            {
+                "code": "1413-4",
+                "display": "Michigan Ottawa",
+                "child_concept": []
+            },
+            {
+                "code": "1414-2",
+                "display": "Oklahoma Ottawa",
+                "child_concept": []
+            },
+            {
+                "code": "1417-5",
+                "display": "Bishop",
+                "child_concept": []
+            },
+            {
+                "code": "1418-3",
+                "display": "Bridgeport",
+                "child_concept": []
+            },
+            {
+                "code": "1419-1",
+                "display": "Burns Paiute",
+                "child_concept": []
+            },
+            {
+                "code": "1420-9",
+                "display": "Cedarville",
+                "child_concept": []
+            },
+            {
+                "code": "1421-7",
+                "display": "Fort Bidwell",
+                "child_concept": []
+            },
+            {
+                "code": "1422-5",
+                "display": "Fort Independence",
+                "child_concept": []
+            },
+            {
+                "code": "1423-3",
+                "display": "Kaibab",
+                "child_concept": []
+            },
+            {
+                "code": "1424-1",
+                "display": "Las Vegas",
+                "child_concept": []
+            },
+            {
+                "code": "1425-8",
+                "display": "Lone Pine",
+                "child_concept": []
+            },
+            {
+                "code": "1426-6",
+                "display": "Lovelock",
+                "child_concept": []
+            },
+            {
+                "code": "1427-4",
+                "display": "Malheur Paiute",
+                "child_concept": []
+            },
+            {
+                "code": "1428-2",
+                "display": "Moapa",
+                "child_concept": []
+            },
+            {
+                "code": "1429-0",
+                "display": "Northern Paiute",
+                "child_concept": []
+            },
+            {
+                "code": "1430-8",
+                "display": "Owens Valley",
+                "child_concept": []
+            },
+            {
+                "code": "1431-6",
+                "display": "Pyramid Lake",
+                "child_concept": []
+            },
+            {
+                "code": "1432-4",
+                "display": "San Juan Southern Paiute",
+                "child_concept": []
+            },
+            {
+                "code": "1433-2",
+                "display": "Southern Paiute",
+                "child_concept": []
+            },
+            {
+                "code": "1434-0",
+                "display": "Summit Lake",
+                "child_concept": []
+            },
+            {
+                "code": "1435-7",
+                "display": "Utu Utu Gwaitu Paiute",
+                "child_concept": []
+            },
+            {
+                "code": "1436-5",
+                "display": "Walker River",
+                "child_concept": []
+            },
+            {
+                "code": "1437-3",
+                "display": "Yerington Paiute",
+                "child_concept": []
+            },
+            {
+                "code": "1442-3",
+                "display": "Indian Township",
+                "child_concept": []
+            },
+            {
+                "code": "1443-1",
+                "display": "Pleasant Point Passamaquoddy",
+                "child_concept": []
+            },
+            {
+                "code": "1446-4",
+                "display": "Oklahoma Pawnee",
+                "child_concept": []
+            },
+            {
+                "code": "1451-4",
+                "display": "Oklahoma Peoria",
+                "child_concept": []
+            },
+            {
+                "code": "1454-8",
+                "display": "Marshantucket Pequot",
+                "child_concept": []
+            },
+            {
+                "code": "1457-1",
+                "display": "Gila River Pima-Maricopa",
+                "child_concept": []
+            },
+            {
+                "code": "1458-9",
+                "display": "Salt River Pima-Maricopa",
+                "child_concept": []
+            },
+            {
+                "code": "1465-4",
+                "display": "Central Pomo",
+                "child_concept": []
+            },
+            {
+                "code": "1466-2",
+                "display": "Dry Creek",
+                "child_concept": []
+            },
+            {
+                "code": "1467-0",
+                "display": "Eastern Pomo",
+                "child_concept": []
+            },
+            {
+                "code": "1468-8",
+                "display": "Kashia",
+                "child_concept": []
+            },
+            {
+                "code": "1469-6",
+                "display": "Northern Pomo",
+                "child_concept": []
+            },
+            {
+                "code": "1470-4",
+                "display": "Scotts Valley",
+                "child_concept": []
+            },
+            {
+                "code": "1471-2",
+                "display": "Stonyford",
+                "child_concept": []
+            },
+            {
+                "code": "1472-0",
+                "display": "Sulphur Bank",
+                "child_concept": []
+            },
+            {
+                "code": "1475-3",
+                "display": "Nebraska Ponca",
+                "child_concept": []
+            },
+            {
+                "code": "1476-1",
+                "display": "Oklahoma Ponca",
+                "child_concept": []
+            },
+            {
+                "code": "1479-5",
+                "display": "Citizen Band Potawatomi",
+                "child_concept": []
+            },
+            {
+                "code": "1480-3",
+                "display": "Forest County",
+                "child_concept": []
+            },
+            {
+                "code": "1481-1",
+                "display": "Hannahville",
+                "child_concept": []
+            },
+            {
+                "code": "1482-9",
+                "display": "Huron Potawatomi",
+                "child_concept": []
+            },
+            {
+                "code": "1483-7",
+                "display": "Pokagon Potawatomi",
+                "child_concept": []
+            },
+            {
+                "code": "1484-5",
+                "display": "Prairie Band",
+                "child_concept": []
+            },
+            {
+                "code": "1485-2",
+                "display": "Wisconsin Potawatomi",
+                "child_concept": []
+            },
+            {
+                "code": "1490-2",
+                "display": "Acoma",
+                "child_concept": []
+            },
+            {
+                "code": "1491-0",
+                "display": "Arizona Tewa",
+                "child_concept": []
+            },
+            {
+                "code": "1492-8",
+                "display": "Cochiti",
+                "child_concept": []
+            },
+            {
+                "code": "1493-6",
+                "display": "Hopi",
+                "child_concept": []
+            },
+            {
+                "code": "1494-4",
+                "display": "Isleta",
+                "child_concept": []
+            },
+            {
+                "code": "1495-1",
+                "display": "Jemez",
+                "child_concept": []
+            },
+            {
+                "code": "1496-9",
+                "display": "Keres",
+                "child_concept": []
+            },
+            {
+                "code": "1497-7",
+                "display": "Laguna",
+                "child_concept": []
+            },
+            {
+                "code": "1498-5",
+                "display": "Nambe",
+                "child_concept": []
+            },
+            {
+                "code": "1499-3",
+                "display": "Picuris",
+                "child_concept": []
+            },
+            {
+                "code": "1500-8",
+                "display": "Piro",
+                "child_concept": []
+            },
+            {
+                "code": "1501-6",
+                "display": "Pojoaque",
+                "child_concept": []
+            },
+            {
+                "code": "1502-4",
+                "display": "San Felipe",
+                "child_concept": []
+            },
+            {
+                "code": "1503-2",
+                "display": "San Ildefonso",
+                "child_concept": []
+            },
+            {
+                "code": "1504-0",
+                "display": "San Juan Pueblo",
+                "child_concept": []
+            },
+            {
+                "code": "1505-7",
+                "display": "San Juan De",
+                "child_concept": []
+            },
+            {
+                "code": "1506-5",
+                "display": "San Juan",
+                "child_concept": []
+            },
+            {
+                "code": "1507-3",
+                "display": "Sandia",
+                "child_concept": []
+            },
+            {
+                "code": "1508-1",
+                "display": "Santa Ana",
+                "child_concept": []
+            },
+            {
+                "code": "1509-9",
+                "display": "Santa Clara",
+                "child_concept": []
+            },
+            {
+                "code": "1510-7",
+                "display": "Santo Domingo",
+                "child_concept": []
+            },
+            {
+                "code": "1511-5",
+                "display": "Taos",
+                "child_concept": []
+            },
+            {
+                "code": "1512-3",
+                "display": "Tesuque",
+                "child_concept": []
+            },
+            {
+                "code": "1513-1",
+                "display": "Tewa",
+                "child_concept": []
+            },
+            {
+                "code": "1514-9",
+                "display": "Tigua",
+                "child_concept": []
+            },
+            {
+                "code": "1515-6",
+                "display": "Zia",
+                "child_concept": []
+            },
+            {
+                "code": "1516-4",
+                "display": "Zuni",
+                "child_concept": []
+            },
+            {
+                "code": "1519-8",
+                "display": "Duwamish",
+                "child_concept": []
+            },
+            {
+                "code": "1520-6",
+                "display": "Kikiallus",
+                "child_concept": []
+            },
+            {
+                "code": "1521-4",
+                "display": "Lower Skagit",
+                "child_concept": []
+            },
+            {
+                "code": "1522-2",
+                "display": "Muckleshoot",
+                "child_concept": []
+            },
+            {
+                "code": "1523-0",
+                "display": "Nisqually",
+                "child_concept": []
+            },
+            {
+                "code": "1524-8",
+                "display": "Nooksack",
+                "child_concept": []
+            },
+            {
+                "code": "1525-5",
+                "display": "Port Madison",
+                "child_concept": []
+            },
+            {
+                "code": "1526-3",
+                "display": "Puyallup",
+                "child_concept": []
+            },
+            {
+                "code": "1527-1",
+                "display": "Samish",
+                "child_concept": []
+            },
+            {
+                "code": "1528-9",
+                "display": "Sauk-Suiattle",
+                "child_concept": []
+            },
+            {
+                "code": "1529-7",
+                "display": "Skokomish",
+                "child_concept": []
+            },
+            {
+                "code": "1530-5",
+                "display": "Skykomish",
+                "child_concept": []
+            },
+            {
+                "code": "1531-3",
+                "display": "Snohomish",
+                "child_concept": []
+            },
+            {
+                "code": "1532-1",
+                "display": "Snoqualmie",
+                "child_concept": []
+            },
+            {
+                "code": "1533-9",
+                "display": "Squaxin Island",
+                "child_concept": []
+            },
+            {
+                "code": "1534-7",
+                "display": "Steilacoom",
+                "child_concept": []
+            },
+            {
+                "code": "1535-4",
+                "display": "Stillaguamish",
+                "child_concept": []
+            },
+            {
+                "code": "1536-2",
+                "display": "Suquamish",
+                "child_concept": []
+            },
+            {
+                "code": "1537-0",
+                "display": "Swinomish",
+                "child_concept": []
+            },
+            {
+                "code": "1538-8",
+                "display": "Tulalip",
+                "child_concept": []
+            },
+            {
+                "code": "1539-6",
+                "display": "Upper Skagit",
+                "child_concept": []
+            },
+            {
+                "code": "1552-9",
+                "display": "Iowa Sac and Fox",
+                "child_concept": []
+            },
+            {
+                "code": "1553-7",
+                "display": "Missouri Sac and Fox",
+                "child_concept": []
+            },
+            {
+                "code": "1554-5",
+                "display": "Oklahoma Sac and Fox",
+                "child_concept": []
+            },
+            {
+                "code": "1567-7",
+                "display": "Big Cypress",
+                "child_concept": []
+            },
+            {
+                "code": "1568-5",
+                "display": "Brighton",
+                "child_concept": []
+            },
+            {
+                "code": "1569-3",
+                "display": "Florida Seminole",
+                "child_concept": []
+            },
+            {
+                "code": "1570-1",
+                "display": "Hollywood Seminole",
+                "child_concept": []
+            },
+            {
+                "code": "1571-9",
+                "display": "Oklahoma Seminole",
+                "child_concept": []
+            },
+            {
+                "code": "1574-3",
+                "display": "San Manual",
+                "child_concept": []
+            },
+            {
+                "code": "1579-2",
+                "display": "Absentee Shawnee",
+                "child_concept": []
+            },
+            {
+                "code": "1580-0",
+                "display": "Eastern Shawnee",
+                "child_concept": []
+            },
+            {
+                "code": "1587-5",
+                "display": "Battle Mountain",
+                "child_concept": []
+            },
+            {
+                "code": "1588-3",
+                "display": "Duckwater",
+                "child_concept": []
+            },
+            {
+                "code": "1589-1",
+                "display": "Elko",
+                "child_concept": []
+            },
+            {
+                "code": "1590-9",
+                "display": "Ely",
+                "child_concept": []
+            },
+            {
+                "code": "1591-7",
+                "display": "Goshute",
+                "child_concept": []
+            },
+            {
+                "code": "1592-5",
+                "display": "Panamint",
+                "child_concept": []
+            },
+            {
+                "code": "1593-3",
+                "display": "Ruby Valley",
+                "child_concept": []
+            },
+            {
+                "code": "1594-1",
+                "display": "Skull Valley",
+                "child_concept": []
+            },
+            {
+                "code": "1595-8",
+                "display": "South Fork Shoshone",
+                "child_concept": []
+            },
+            {
+                "code": "1596-6",
+                "display": "Te-Moak Western Shoshone",
+                "child_concept": []
+            },
+            {
+                "code": "1597-4",
+                "display": "Timbi-Sha Shoshone",
+                "child_concept": []
+            },
+            {
+                "code": "1598-2",
+                "display": "Washakie",
+                "child_concept": []
+            },
+            {
+                "code": "1599-0",
+                "display": "Wind River Shoshone",
+                "child_concept": []
+            },
+            {
+                "code": "1600-6",
+                "display": "Yomba",
+                "child_concept": []
+            },
+            {
+                "code": "1603-0",
+                "display": "Duck Valley",
+                "child_concept": []
+            },
+            {
+                "code": "1604-8",
+                "display": "Fallon",
+                "child_concept": []
+            },
+            {
+                "code": "1605-5",
+                "display": "Fort McDermitt",
+                "child_concept": []
+            },
+            {
+                "code": "1610-5",
+                "display": "Blackfoot Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1611-3",
+                "display": "Brule Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1612-1",
+                "display": "Cheyenne River Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1613-9",
+                "display": "Crow Creek Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1614-7",
+                "display": "Dakota Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1615-4",
+                "display": "Flandreau Santee",
+                "child_concept": []
+            },
+            {
+                "code": "1616-2",
+                "display": "Fort Peck",
+                "child_concept": []
+            },
+            {
+                "code": "1617-0",
+                "display": "Lake Traverse Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1618-8",
+                "display": "Lower Brule Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1619-6",
+                "display": "Lower Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1620-4",
+                "display": "Mdewakanton Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1621-2",
+                "display": "Miniconjou",
+                "child_concept": []
+            },
+            {
+                "code": "1622-0",
+                "display": "Oglala Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1623-8",
+                "display": "Pine Ridge Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1624-6",
+                "display": "Pipestone Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1625-3",
+                "display": "Prairie Island Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1626-1",
+                "display": "Prior Lake Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1627-9",
+                "display": "Rosebud Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1628-7",
+                "display": "Sans Arc Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1629-5",
+                "display": "Santee Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1630-3",
+                "display": "Sisseton-Wahpeton",
+                "child_concept": []
+            },
+            {
+                "code": "1631-1",
+                "display": "Sisseton Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1632-9",
+                "display": "Spirit Lake Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1633-7",
+                "display": "Standing Rock Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1634-5",
+                "display": "Teton Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1635-2",
+                "display": "Two Kettle Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1636-0",
+                "display": "Upper Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1637-8",
+                "display": "Wahpekute Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1638-6",
+                "display": "Wahpeton Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1639-4",
+                "display": "Wazhaza Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1640-2",
+                "display": "Yankton Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1641-0",
+                "display": "Yanktonai Sioux",
+                "child_concept": []
+            },
+            {
+                "code": "1654-3",
+                "display": "Ak-Chin",
+                "child_concept": []
+            },
+            {
+                "code": "1655-0",
+                "display": "Gila Bend",
+                "child_concept": []
+            },
+            {
+                "code": "1656-8",
+                "display": "San Xavier",
+                "child_concept": []
+            },
+            {
+                "code": "1657-6",
+                "display": "Sells",
+                "child_concept": []
+            },
+            {
+                "code": "1668-3",
+                "display": "Cow Creek Umpqua",
+                "child_concept": []
+            },
+            {
+                "code": "1671-7",
+                "display": "Allen Canyon",
+                "child_concept": []
+            },
+            {
+                "code": "1672-5",
+                "display": "Uintah Ute",
+                "child_concept": []
+            },
+            {
+                "code": "1673-3",
+                "display": "Ute Mountain Ute",
+                "child_concept": []
+            },
+            {
+                "code": "1680-8",
+                "display": "Gay Head Wampanoag",
+                "child_concept": []
+            },
+            {
+                "code": "1681-6",
+                "display": "Mashpee Wampanoag",
+                "child_concept": []
+            },
+            {
+                "code": "1688-1",
+                "display": "Alpine",
+                "child_concept": []
+            },
+            {
+                "code": "1689-9",
+                "display": "Carson",
+                "child_concept": []
+            },
+            {
+                "code": "1690-7",
+                "display": "Dresslerville",
+                "child_concept": []
+            },
+            {
+                "code": "1697-2",
+                "display": "Ho-chunk",
+                "child_concept": []
+            },
+            {
+                "code": "1698-0",
+                "display": "Nebraska Winnebago",
+                "child_concept": []
+            },
+            {
+                "code": "1705-3",
+                "display": "Table Bluff",
+                "child_concept": []
+            },
+            {
+                "code": "1712-9",
+                "display": "Barrio Libre",
+                "child_concept": []
+            },
+            {
+                "code": "1713-7",
+                "display": "Pascua Yaqui",
+                "child_concept": []
+            },
+            {
+                "code": "1718-6",
+                "display": "Chukchansi",
+                "child_concept": []
+            },
+            {
+                "code": "1719-4",
+                "display": "Tachi",
+                "child_concept": []
+            },
+            {
+                "code": "1720-2",
+                "display": "Tule River",
+                "child_concept": []
+            },
+            {
+                "code": "1725-1",
+                "display": "Cocopah",
+                "child_concept": []
+            },
+            {
+                "code": "1726-9",
+                "display": "Havasupai",
+                "child_concept": []
+            },
+            {
+                "code": "1727-7",
+                "display": "Hualapai",
+                "child_concept": []
+            },
+            {
+                "code": "1728-5",
+                "display": "Maricopa",
+                "child_concept": []
+            },
+            {
+                "code": "1729-3",
+                "display": "Mohave",
+                "child_concept": []
+            },
+            {
+                "code": "1730-1",
+                "display": "Quechan",
+                "child_concept": []
+            },
+            {
+                "code": "1731-9",
+                "display": "Yavapai",
+                "child_concept": []
+            },
+            {
+                "code": "1733-5",
+                "display": "Coast Yurok",
+                "child_concept": []
+            }
+        ]
+    },
+    {
+        "code": "1739-2",
+        "display": "Alaskan Athabascan",
+        "child_concept": [
+            {
+                "code": "1740-0",
+                "display": "Ahtna",
+                "child_concept": []
+            }
+        ]
+    },
+    {
+        "code": "1811-9",
+        "display": "Southeast Alaska",
+        "child_concept": [
+            {
+                "code": "1813-5",
+                "display": "Tlingit-Haida",
+                "child_concept": []
+            },
+            {
+                "code": "1837-4",
+                "display": "Tsimshian",
+                "child_concept": []
+            },
+            {
+                "code": "1814-3",
+                "display": "Angoon",
+                "child_concept": []
+            },
+            {
+                "code": "1815-0",
+                "display": "Central Council of Tlingit and Haida Tribes",
+                "child_concept": []
+            },
+            {
+                "code": "1816-8",
+                "display": "Chilkat",
+                "child_concept": []
+            },
+            {
+                "code": "1817-6",
+                "display": "Chilkoot",
+                "child_concept": []
+            },
+            {
+                "code": "1818-4",
+                "display": "Craig",
+                "child_concept": []
+            },
+            {
+                "code": "1819-2",
+                "display": "Douglas",
+                "child_concept": []
+            },
+            {
+                "code": "1820-0",
+                "display": "Haida",
+                "child_concept": []
+            },
+            {
+                "code": "1821-8",
+                "display": "Hoonah",
+                "child_concept": []
+            },
+            {
+                "code": "1822-6",
+                "display": "Hydaburg",
+                "child_concept": []
+            },
+            {
+                "code": "1823-4",
+                "display": "Kake",
+                "child_concept": []
+            },
+            {
+                "code": "1824-2",
+                "display": "Kasaan",
+                "child_concept": []
+            },
+            {
+                "code": "1825-9",
+                "display": "Kenaitze",
+                "child_concept": []
+            },
+            {
+                "code": "1826-7",
+                "display": "Ketchikan",
+                "child_concept": []
+            },
+            {
+                "code": "1827-5",
+                "display": "Klawock",
+                "child_concept": []
+            },
+            {
+                "code": "1828-3",
+                "display": "Pelican",
+                "child_concept": []
+            },
+            {
+                "code": "1829-1",
+                "display": "Petersburg",
+                "child_concept": []
+            },
+            {
+                "code": "1830-9",
+                "display": "Saxman",
+                "child_concept": []
+            },
+            {
+                "code": "1831-7",
+                "display": "Sitka",
+                "child_concept": []
+            },
+            {
+                "code": "1832-5",
+                "display": "Tenakee Springs",
+                "child_concept": []
+            },
+            {
+                "code": "1833-3",
+                "display": "Tlingit",
+                "child_concept": []
+            },
+            {
+                "code": "1834-1",
+                "display": "Wrangell",
+                "child_concept": []
+            },
+            {
+                "code": "1835-8",
+                "display": "Yakutat",
+                "child_concept": []
+            },
+            {
+                "code": "1838-2",
+                "display": "Metlakatla",
+                "child_concept": []
+            }
+        ]
+    },
+    {
+        "code": "1840-8",
+        "display": "Eskimo",
+        "child_concept": [
+            {
+                "code": "1842-4",
+                "display": "Greenland Eskimo",
+                "child_concept": []
+            },
+            {
+                "code": "1844-0",
+                "display": "Inupiat Eskimo",
+                "child_concept": []
+            },
+            {
+                "code": "1891-1",
+                "display": "Siberian Eskimo",
+                "child_concept": []
+            },
+            {
+                "code": "1896-0",
+                "display": "Yupik Eskimo",
+                "child_concept": []
+            },
+            {
+                "code": "1845-7",
+                "display": "Ambler",
+                "child_concept": []
+            },
+            {
+                "code": "1846-5",
+                "display": "Anaktuvuk",
+                "child_concept": []
+            },
+            {
+                "code": "1847-3",
+                "display": "Anaktuvuk Pass",
+                "child_concept": []
+            },
+            {
+                "code": "1848-1",
+                "display": "Arctic Slope Inupiat",
+                "child_concept": []
+            },
+            {
+                "code": "1849-9",
+                "display": "Arctic Slope Corporation",
+                "child_concept": []
+            },
+            {
+                "code": "1850-7",
+                "display": "Atqasuk",
+                "child_concept": []
+            },
+            {
+                "code": "1851-5",
+                "display": "Barrow",
+                "child_concept": []
+            },
+            {
+                "code": "1852-3",
+                "display": "Bering Straits Inupiat",
+                "child_concept": []
+            },
+            {
+                "code": "1853-1",
+                "display": "Brevig Mission",
+                "child_concept": []
+            },
+            {
+                "code": "1854-9",
+                "display": "Buckland",
+                "child_concept": []
+            },
+            {
+                "code": "1855-6",
+                "display": "Chinik",
+                "child_concept": []
+            },
+            {
+                "code": "1856-4",
+                "display": "Council",
+                "child_concept": []
+            },
+            {
+                "code": "1857-2",
+                "display": "Deering",
+                "child_concept": []
+            },
+            {
+                "code": "1858-0",
+                "display": "Elim",
+                "child_concept": []
+            },
+            {
+                "code": "1859-8",
+                "display": "Golovin",
+                "child_concept": []
+            },
+            {
+                "code": "1860-6",
+                "display": "Inalik Diomede",
+                "child_concept": []
+            },
+            {
+                "code": "1861-4",
+                "display": "Inupiaq",
+                "child_concept": []
+            },
+            {
+                "code": "1862-2",
+                "display": "Kaktovik",
+                "child_concept": []
+            },
+            {
+                "code": "1863-0",
+                "display": "Kawerak",
+                "child_concept": []
+            },
+            {
+                "code": "1864-8",
+                "display": "Kiana",
+                "child_concept": []
+            },
+            {
+                "code": "1865-5",
+                "display": "Kivalina",
+                "child_concept": []
+            },
+            {
+                "code": "1866-3",
+                "display": "Kobuk",
+                "child_concept": []
+            },
+            {
+                "code": "1867-1",
+                "display": "Kotzebue",
+                "child_concept": []
+            },
+            {
+                "code": "1868-9",
+                "display": "Koyuk",
+                "child_concept": []
+            },
+            {
+                "code": "1869-7",
+                "display": "Kwiguk",
+                "child_concept": []
+            },
+            {
+                "code": "1870-5",
+                "display": "Mauneluk Inupiat",
+                "child_concept": []
+            },
+            {
+                "code": "1871-3",
+                "display": "Nana Inupiat",
+                "child_concept": []
+            },
+            {
+                "code": "1872-1",
+                "display": "Noatak",
+                "child_concept": []
+            },
+            {
+                "code": "1873-9",
+                "display": "Nome",
+                "child_concept": []
+            },
+            {
+                "code": "1874-7",
+                "display": "Noorvik",
+                "child_concept": []
+            },
+            {
+                "code": "1875-4",
+                "display": "Nuiqsut",
+                "child_concept": []
+            },
+            {
+                "code": "1876-2",
+                "display": "Point Hope",
+                "child_concept": []
+            },
+            {
+                "code": "1877-0",
+                "display": "Point Lay",
+                "child_concept": []
+            },
+            {
+                "code": "1878-8",
+                "display": "Selawik",
+                "child_concept": []
+            },
+            {
+                "code": "1879-6",
+                "display": "Shaktoolik",
+                "child_concept": []
+            },
+            {
+                "code": "1880-4",
+                "display": "Shishmaref",
+                "child_concept": []
+            },
+            {
+                "code": "1881-2",
+                "display": "Shungnak",
+                "child_concept": []
+            },
+            {
+                "code": "1882-0",
+                "display": "Solomon",
+                "child_concept": []
+            },
+            {
+                "code": "1883-8",
+                "display": "Teller",
+                "child_concept": []
+            },
+            {
+                "code": "1884-6",
+                "display": "Unalakleet",
+                "child_concept": []
+            },
+            {
+                "code": "1885-3",
+                "display": "Wainwright",
+                "child_concept": []
+            },
+            {
+                "code": "1886-1",
+                "display": "Wales",
+                "child_concept": []
+            },
+            {
+                "code": "1887-9",
+                "display": "White Mountain",
+                "child_concept": []
+            },
+            {
+                "code": "1888-7",
+                "display": "White Mountain Inupiat",
+                "child_concept": []
+            },
+            {
+                "code": "1889-5",
+                "display": "Mary's Igloo",
+                "child_concept": []
+            },
+            {
+                "code": "1892-9",
+                "display": "Gambell",
+                "child_concept": []
+            },
+            {
+                "code": "1893-7",
+                "display": "Savoonga",
+                "child_concept": []
+            },
+            {
+                "code": "1894-5",
+                "display": "Siberian Yupik",
+                "child_concept": []
+            },
+            {
+                "code": "1897-8",
+                "display": "Akiachak",
+                "child_concept": []
+            },
+            {
+                "code": "1898-6",
+                "display": "Akiak",
+                "child_concept": []
+            },
+            {
+                "code": "1899-4",
+                "display": "Alakanuk",
+                "child_concept": []
+            },
+            {
+                "code": "1900-0",
+                "display": "Aleknagik",
+                "child_concept": []
+            },
+            {
+                "code": "1901-8",
+                "display": "Andreafsky",
+                "child_concept": []
+            },
+            {
+                "code": "1902-6",
+                "display": "Aniak",
+                "child_concept": []
+            },
+            {
+                "code": "1903-4",
+                "display": "Atmautluak",
+                "child_concept": []
+            },
+            {
+                "code": "1904-2",
+                "display": "Bethel",
+                "child_concept": []
+            },
+            {
+                "code": "1905-9",
+                "display": "Bill Moore's Slough",
+                "child_concept": []
+            },
+            {
+                "code": "1906-7",
+                "display": "Bristol Bay Yupik",
+                "child_concept": []
+            },
+            {
+                "code": "1907-5",
+                "display": "Calista Yupik",
+                "child_concept": []
+            },
+            {
+                "code": "1908-3",
+                "display": "Chefornak",
+                "child_concept": []
+            },
+            {
+                "code": "1909-1",
+                "display": "Chevak",
+                "child_concept": []
+            },
+            {
+                "code": "1910-9",
+                "display": "Chuathbaluk",
+                "child_concept": []
+            },
+            {
+                "code": "1911-7",
+                "display": "Clark's Point",
+                "child_concept": []
+            },
+            {
+                "code": "1912-5",
+                "display": "Crooked Creek",
+                "child_concept": []
+            },
+            {
+                "code": "1913-3",
+                "display": "Dillingham",
+                "child_concept": []
+            },
+            {
+                "code": "1914-1",
+                "display": "Eek",
+                "child_concept": []
+            },
+            {
+                "code": "1915-8",
+                "display": "Ekuk",
+                "child_concept": []
+            },
+            {
+                "code": "1916-6",
+                "display": "Ekwok",
+                "child_concept": []
+            },
+            {
+                "code": "1917-4",
+                "display": "Emmonak",
+                "child_concept": []
+            },
+            {
+                "code": "1918-2",
+                "display": "Goodnews Bay",
+                "child_concept": []
+            },
+            {
+                "code": "1919-0",
+                "display": "Hooper Bay",
+                "child_concept": []
+            },
+            {
+                "code": "1920-8",
+                "display": "Iqurmuit (Russian Mission)",
+                "child_concept": []
+            },
+            {
+                "code": "1921-6",
+                "display": "Kalskag",
+                "child_concept": []
+            },
+            {
+                "code": "1922-4",
+                "display": "Kasigluk",
+                "child_concept": []
+            },
+            {
+                "code": "1923-2",
+                "display": "Kipnuk",
+                "child_concept": []
+            },
+            {
+                "code": "1924-0",
+                "display": "Koliganek",
+                "child_concept": []
+            },
+            {
+                "code": "1925-7",
+                "display": "Kongiganak",
+                "child_concept": []
+            },
+            {
+                "code": "1926-5",
+                "display": "Kotlik",
+                "child_concept": []
+            },
+            {
+                "code": "1927-3",
+                "display": "Kwethluk",
+                "child_concept": []
+            },
+            {
+                "code": "1928-1",
+                "display": "Kwigillingok",
+                "child_concept": []
+            },
+            {
+                "code": "1929-9",
+                "display": "Levelock",
+                "child_concept": []
+            },
+            {
+                "code": "1930-7",
+                "display": "Lower Kalskag",
+                "child_concept": []
+            },
+            {
+                "code": "1931-5",
+                "display": "Manokotak",
+                "child_concept": []
+            },
+            {
+                "code": "1932-3",
+                "display": "Marshall",
+                "child_concept": []
+            },
+            {
+                "code": "1933-1",
+                "display": "Mekoryuk",
+                "child_concept": []
+            },
+            {
+                "code": "1934-9",
+                "display": "Mountain Village",
+                "child_concept": []
+            },
+            {
+                "code": "1935-6",
+                "display": "Naknek",
+                "child_concept": []
+            },
+            {
+                "code": "1936-4",
+                "display": "Napaumute",
+                "child_concept": []
+            },
+            {
+                "code": "1937-2",
+                "display": "Napakiak",
+                "child_concept": []
+            },
+            {
+                "code": "1938-0",
+                "display": "Napaskiak",
+                "child_concept": []
+            },
+            {
+                "code": "1939-8",
+                "display": "Newhalen",
+                "child_concept": []
+            },
+            {
+                "code": "1940-6",
+                "display": "New Stuyahok",
+                "child_concept": []
+            },
+            {
+                "code": "1941-4",
+                "display": "Newtok",
+                "child_concept": []
+            },
+            {
+                "code": "1942-2",
+                "display": "Nightmute",
+                "child_concept": []
+            },
+            {
+                "code": "1943-0",
+                "display": "Nunapitchukv",
+                "child_concept": []
+            },
+            {
+                "code": "1944-8",
+                "display": "Oscarville",
+                "child_concept": []
+            },
+            {
+                "code": "1945-5",
+                "display": "Pilot Station",
+                "child_concept": []
+            },
+            {
+                "code": "1946-3",
+                "display": "Pitkas Point",
+                "child_concept": []
+            },
+            {
+                "code": "1947-1",
+                "display": "Platinum",
+                "child_concept": []
+            },
+            {
+                "code": "1948-9",
+                "display": "Portage Creek",
+                "child_concept": []
+            },
+            {
+                "code": "1949-7",
+                "display": "Quinhagak",
+                "child_concept": []
+            },
+            {
+                "code": "1950-5",
+                "display": "Red Devil",
+                "child_concept": []
+            },
+            {
+                "code": "1951-3",
+                "display": "St. Michael",
+                "child_concept": []
+            },
+            {
+                "code": "1952-1",
+                "display": "Scammon Bay",
+                "child_concept": []
+            },
+            {
+                "code": "1953-9",
+                "display": "Sheldon's Point",
+                "child_concept": []
+            },
+            {
+                "code": "1954-7",
+                "display": "Sleetmute",
+                "child_concept": []
+            },
+            {
+                "code": "1955-4",
+                "display": "Stebbins",
+                "child_concept": []
+            },
+            {
+                "code": "1956-2",
+                "display": "Togiak",
+                "child_concept": []
+            },
+            {
+                "code": "1957-0",
+                "display": "Toksook",
+                "child_concept": []
+            },
+            {
+                "code": "1958-8",
+                "display": "Tulukskak",
+                "child_concept": []
+            },
+            {
+                "code": "1959-6",
+                "display": "Tuntutuliak",
+                "child_concept": []
+            },
+            {
+                "code": "1960-4",
+                "display": "Tununak",
+                "child_concept": []
+            },
+            {
+                "code": "1961-2",
+                "display": "Twin Hills",
+                "child_concept": []
+            },
+            {
+                "code": "1962-0",
+                "display": "Georgetown",
+                "child_concept": []
+            },
+            {
+                "code": "1963-8",
+                "display": "St. Mary's",
+                "child_concept": []
+            },
+            {
+                "code": "1964-6",
+                "display": "Umkumiate",
+                "child_concept": []
+            }
+        ]
+    },
+    {
+        "code": "1966-1",
+        "display": "Aleut",
+        "child_concept": [
+            {
+                "code": "1968-7",
+                "display": "Alutiiq Aleut",
+                "child_concept": []
+            },
+            {
+                "code": "1972-9",
+                "display": "Bristol Bay Aleut",
+                "child_concept": []
+            },
+            {
+                "code": "1984-4",
+                "display": "Chugach Aleut",
+                "child_concept": []
+            },
+            {
+                "code": "1990-1",
+                "display": "Eyak",
+                "child_concept": []
+            },
+            {
+                "code": "1992-7",
+                "display": "Koniag Aleut",
+                "child_concept": []
+            },
+            {
+                "code": "2002-4",
+                "display": "Sugpiaq",
+                "child_concept": []
+            },
+            {
+                "code": "2004-0",
+                "display": "Suqpigaq",
+                "child_concept": []
+            },
+            {
+                "code": "2006-5",
+                "display": "Unangan Aleut",
+                "child_concept": []
+            },
+            {
+                "code": "1969-5",
+                "display": "Tatitlek",
+                "child_concept": []
+            },
+            {
+                "code": "1970-3",
+                "display": "Ugashik",
+                "child_concept": []
+            },
+            {
+                "code": "1973-7",
+                "display": "Chignik",
+                "child_concept": []
+            },
+            {
+                "code": "1974-5",
+                "display": "Chignik Lake",
+                "child_concept": []
+            },
+            {
+                "code": "1975-2",
+                "display": "Egegik",
+                "child_concept": []
+            },
+            {
+                "code": "1976-0",
+                "display": "Igiugig",
+                "child_concept": []
+            },
+            {
+                "code": "1977-8",
+                "display": "Ivanof Bay",
+                "child_concept": []
+            },
+            {
+                "code": "1978-6",
+                "display": "King Salmon",
+                "child_concept": []
+            },
+            {
+                "code": "1979-4",
+                "display": "Kokhanok",
+                "child_concept": []
+            },
+            {
+                "code": "1980-2",
+                "display": "Perryville",
+                "child_concept": []
+            },
+            {
+                "code": "1981-0",
+                "display": "Pilot Point",
+                "child_concept": []
+            },
+            {
+                "code": "1982-8",
+                "display": "Port Heiden",
+                "child_concept": []
+            },
+            {
+                "code": "1985-1",
+                "display": "Chenega",
+                "child_concept": []
+            },
+            {
+                "code": "1986-9",
+                "display": "Chugach Corporation",
+                "child_concept": []
+            },
+            {
+                "code": "1987-7",
+                "display": "English Bay",
+                "child_concept": []
+            },
+            {
+                "code": "1988-5",
+                "display": "Port Graham",
+                "child_concept": []
+            },
+            {
+                "code": "1993-5",
+                "display": "Akhiok",
+                "child_concept": []
+            },
+            {
+                "code": "1994-3",
+                "display": "Agdaagux",
+                "child_concept": []
+            },
+            {
+                "code": "1995-0",
+                "display": "Karluk",
+                "child_concept": []
+            },
+            {
+                "code": "1996-8",
+                "display": "Kodiak",
+                "child_concept": []
+            },
+            {
+                "code": "1997-6",
+                "display": "Larsen Bay",
+                "child_concept": []
+            },
+            {
+                "code": "1998-4",
+                "display": "Old Harbor",
+                "child_concept": []
+            },
+            {
+                "code": "1999-2",
+                "display": "Ouzinkie",
+                "child_concept": []
+            },
+            {
+                "code": "2000-8",
+                "display": "Port Lions",
+                "child_concept": []
+            },
+            {
+                "code": "2007-3",
+                "display": "Akutan",
+                "child_concept": []
+            },
+            {
+                "code": "2008-1",
+                "display": "Aleut Corporation",
+                "child_concept": []
+            },
+            {
+                "code": "2009-9",
+                "display": "Aleutian",
+                "child_concept": []
+            },
+            {
+                "code": "2010-7",
+                "display": "Aleutian Islander",
+                "child_concept": []
+            },
+            {
+                "code": "2011-5",
+                "display": "Atka",
+                "child_concept": []
+            },
+            {
+                "code": "2012-3",
+                "display": "Belkofski",
+                "child_concept": []
+            },
+            {
+                "code": "2013-1",
+                "display": "Chignik Lagoon",
+                "child_concept": []
+            },
+            {
+                "code": "2014-9",
+                "display": "King Cove",
+                "child_concept": []
+            },
+            {
+                "code": "2015-6",
+                "display": "False Pass",
+                "child_concept": []
+            },
+            {
+                "code": "2016-4",
+                "display": "Nelson Lagoon",
+                "child_concept": []
+            },
+            {
+                "code": "2017-2",
+                "display": "Nikolski",
+                "child_concept": []
+            },
+            {
+                "code": "2018-0",
+                "display": "Pauloff Harbor",
+                "child_concept": []
+            },
+            {
+                "code": "2019-8",
+                "display": "Qagan Toyagungin",
+                "child_concept": []
+            },
+            {
+                "code": "2020-6",
+                "display": "Qawalangin",
+                "child_concept": []
+            },
+            {
+                "code": "2021-4",
+                "display": "St. George",
+                "child_concept": []
+            },
+            {
+                "code": "2022-2",
+                "display": "St. Paul",
+                "child_concept": []
+            },
+            {
+                "code": "2023-0",
+                "display": "Sand Point",
+                "child_concept": []
+            },
+            {
+                "code": "2024-8",
+                "display": "South Naknek",
+                "child_concept": []
+            },
+            {
+                "code": "2025-5",
+                "display": "Unalaska",
+                "child_concept": []
+            },
+            {
+                "code": "2026-3",
+                "display": "Unga",
+                "child_concept": []
+            }
+        ]
+    },
+    {
+        "code": "2028-9",
+        "display": "Asian",
+        "child_concept": [
+            {
+                "code": "2029-7",
+                "display": "Asian Indian",
+                "child_concept": []
+            },
+            {
+                "code": "2030-5",
+                "display": "Bangladeshi",
+                "child_concept": []
+            },
+            {
+                "code": "2031-3",
+                "display": "Bhutanese",
+                "child_concept": []
+            },
+            {
+                "code": "2032-1",
+                "display": "Burmese",
+                "child_concept": []
+            },
+            {
+                "code": "2033-9",
+                "display": "Cambodian",
+                "child_concept": []
+            },
+            {
+                "code": "2034-7",
+                "display": "Chinese",
+                "child_concept": []
+            },
+            {
+                "code": "2035-4",
+                "display": "Taiwanese",
+                "child_concept": []
+            },
+            {
+                "code": "2036-2",
+                "display": "Filipino",
+                "child_concept": []
+            },
+            {
+                "code": "2037-0",
+                "display": "Hmong",
+                "child_concept": []
+            },
+            {
+                "code": "2038-8",
+                "display": "Indonesian",
+                "child_concept": []
+            },
+            {
+                "code": "2039-6",
+                "display": "Japanese",
+                "child_concept": []
+            },
+            {
+                "code": "2040-4",
+                "display": "Korean",
+                "child_concept": []
+            },
+            {
+                "code": "2041-2",
+                "display": "Laotian",
+                "child_concept": []
+            },
+            {
+                "code": "2042-0",
+                "display": "Malaysian",
+                "child_concept": []
+            },
+            {
+                "code": "2043-8",
+                "display": "Okinawan",
+                "child_concept": []
+            },
+            {
+                "code": "2044-6",
+                "display": "Pakistani",
+                "child_concept": []
+            },
+            {
+                "code": "2045-3",
+                "display": "Sri Lankan",
+                "child_concept": []
+            },
+            {
+                "code": "2046-1",
+                "display": "Thai",
+                "child_concept": []
+            },
+            {
+                "code": "2047-9",
+                "display": "Vietnamese",
+                "child_concept": []
+            },
+            {
+                "code": "2048-7",
+                "display": "Iwo Jiman",
+                "child_concept": []
+            },
+            {
+                "code": "2049-5",
+                "display": "Maldivian",
+                "child_concept": []
+            },
+            {
+                "code": "2050-3",
+                "display": "Nepalese",
+                "child_concept": []
+            },
+            {
+                "code": "2051-1",
+                "display": "Singaporean",
+                "child_concept": []
+            },
+            {
+                "code": "2052-9",
+                "display": "Madagascar",
+                "child_concept": []
+            }
+        ]
+    },
+    {
+        "code": "2054-5",
+        "display": "Black or African American",
+        "child_concept": [
+            {
+                "code": "2056-0",
+                "display": "Black",
+                "child_concept": []
+            },
+            {
+                "code": "2058-6",
+                "display": "African American",
+                "child_concept": []
+            },
+            {
+                "code": "2060-2",
+                "display": "African",
+                "child_concept": []
+            },
+            {
+                "code": "2067-7",
+                "display": "Bahamian",
+                "child_concept": []
+            },
+            {
+                "code": "2068-5",
+                "display": "Barbadian",
+                "child_concept": []
+            },
+            {
+                "code": "2069-3",
+                "display": "Dominican",
+                "child_concept": []
+            },
+            {
+                "code": "2070-1",
+                "display": "Dominica Islander",
+                "child_concept": []
+            },
+            {
+                "code": "2071-9",
+                "display": "Haitian",
+                "child_concept": []
+            },
+            {
+                "code": "2072-7",
+                "display": "Jamaican",
+                "child_concept": []
+            },
+            {
+                "code": "2073-5",
+                "display": "Tobagoan",
+                "child_concept": []
+            },
+            {
+                "code": "2074-3",
+                "display": "Trinidadian",
+                "child_concept": []
+            },
+            {
+                "code": "2075-0",
+                "display": "West Indian",
+                "child_concept": []
+            },
+            {
+                "code": "2061-0",
+                "display": "Botswanan",
+                "child_concept": []
+            },
+            {
+                "code": "2062-8",
+                "display": "Ethiopian",
+                "child_concept": []
+            },
+            {
+                "code": "2063-6",
+                "display": "Liberian",
+                "child_concept": []
+            },
+            {
+                "code": "2064-4",
+                "display": "Namibian",
+                "child_concept": []
+            },
+            {
+                "code": "2065-1",
+                "display": "Nigerian",
+                "child_concept": []
+            },
+            {
+                "code": "2066-9",
+                "display": "Zairean",
+                "child_concept": []
+            }
+        ]
+    },
+    {
+        "code": "2076-8",
+        "display": "Native Hawaiian or Other Pacific Islander",
+        "child_concept": [
+            {
+                "code": "2078-4",
+                "display": "Polynesian",
+                "child_concept": []
+            },
+            {
+                "code": "2085-9",
+                "display": "Micronesian",
+                "child_concept": []
+            },
+            {
+                "code": "2100-6",
+                "display": "Melanesian",
+                "child_concept": []
+            },
+            {
+                "code": "2500-7",
+                "display": "Other Pacific Islander",
+                "child_concept": []
+            },
+            {
+                "code": "2079-2",
+                "display": "Native Hawaiian",
+                "child_concept": []
+            },
+            {
+                "code": "2080-0",
+                "display": "Samoan",
+                "child_concept": []
+            },
+            {
+                "code": "2081-8",
+                "display": "Tahitian",
+                "child_concept": []
+            },
+            {
+                "code": "2082-6",
+                "display": "Tongan",
+                "child_concept": []
+            },
+            {
+                "code": "2083-4",
+                "display": "Tokelauan",
+                "child_concept": []
+            },
+            {
+                "code": "2086-7",
+                "display": "Guamanian or Chamorro",
+                "child_concept": []
+            },
+            {
+                "code": "2087-5",
+                "display": "Guamanian",
+                "child_concept": []
+            },
+            {
+                "code": "2088-3",
+                "display": "Chamorro",
+                "child_concept": []
+            },
+            {
+                "code": "2089-1",
+                "display": "Mariana Islander",
+                "child_concept": []
+            },
+            {
+                "code": "2090-9",
+                "display": "Marshallese",
+                "child_concept": []
+            },
+            {
+                "code": "2091-7",
+                "display": "Palauan",
+                "child_concept": []
+            },
+            {
+                "code": "2092-5",
+                "display": "Carolinian",
+                "child_concept": []
+            },
+            {
+                "code": "2093-3",
+                "display": "Kosraean",
+                "child_concept": []
+            },
+            {
+                "code": "2094-1",
+                "display": "Pohnpeian",
+                "child_concept": []
+            },
+            {
+                "code": "2095-8",
+                "display": "Saipanese",
+                "child_concept": []
+            },
+            {
+                "code": "2096-6",
+                "display": "Kiribati",
+                "child_concept": []
+            },
+            {
+                "code": "2097-4",
+                "display": "Chuukese",
+                "child_concept": []
+            },
+            {
+                "code": "2098-2",
+                "display": "Yapese",
+                "child_concept": []
+            },
+            {
+                "code": "2101-4",
+                "display": "Fijian",
+                "child_concept": []
+            },
+            {
+                "code": "2102-2",
+                "display": "Papua New Guinean",
+                "child_concept": []
+            },
+            {
+                "code": "2103-0",
+                "display": "Solomon Islander",
+                "child_concept": []
+            },
+            {
+                "code": "2104-8",
+                "display": "New Hebrides",
+                "child_concept": []
+            }
+        ]
+    },
+    {
+        "code": "2106-3",
+        "display": "White",
+        "child_concept": [
+            {
+                "code": "2108-9",
+                "display": "European",
+                "child_concept": []
+            },
+            {
+                "code": "2118-8",
+                "display": "Middle Eastern or North African",
+                "child_concept": []
+            },
+            {
+                "code": "2129-5",
+                "display": "Arab",
+                "child_concept": []
+            },
+            {
+                "code": "2109-7",
+                "display": "Armenian",
+                "child_concept": []
+            },
+            {
+                "code": "2110-5",
+                "display": "English",
+                "child_concept": []
+            },
+            {
+                "code": "2111-3",
+                "display": "French",
+                "child_concept": []
+            },
+            {
+                "code": "2112-1",
+                "display": "German",
+                "child_concept": []
+            },
+            {
+                "code": "2113-9",
+                "display": "Irish",
+                "child_concept": []
+            },
+            {
+                "code": "2114-7",
+                "display": "Italian",
+                "child_concept": []
+            },
+            {
+                "code": "2115-4",
+                "display": "Polish",
+                "child_concept": []
+            },
+            {
+                "code": "2116-2",
+                "display": "Scottish",
+                "child_concept": []
+            },
+            {
+                "code": "2119-6",
+                "display": "Assyrian",
+                "child_concept": []
+            },
+            {
+                "code": "2120-4",
+                "display": "Egyptian",
+                "child_concept": []
+            },
+            {
+                "code": "2121-2",
+                "display": "Iranian",
+                "child_concept": []
+            },
+            {
+                "code": "2122-0",
+                "display": "Iraqi",
+                "child_concept": []
+            },
+            {
+                "code": "2123-8",
+                "display": "Lebanese",
+                "child_concept": []
+            },
+            {
+                "code": "2124-6",
+                "display": "Palestinian",
+                "child_concept": []
+            },
+            {
+                "code": "2125-3",
+                "display": "Syrian",
+                "child_concept": []
+            },
+            {
+                "code": "2126-1",
+                "display": "Afghanistani",
+                "child_concept": []
+            },
+            {
+                "code": "2127-9",
+                "display": "Israeili",
+                "child_concept": []
+            }
+        ]
+    }
+]

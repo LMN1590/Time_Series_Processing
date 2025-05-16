@@ -21,8 +21,8 @@ model:
   name: LSTM
   params:
     input_dim: 170
-    hidden_dim: 64
-    layer_dim: 16
+    hidden_dim: 512
+    layer_dim: 32
     output_dim: 1
     dropout_prob: 0.1
 
@@ -42,7 +42,11 @@ training_param:
 loss:
   - name: GaussianLoss
     params: {}
-    weight: 1.
+    weight: 0.1
   - name: MSELoss
     params: {}
     weight: 1.
+  - name: StdReg
+    params: {}
+    weight: 0.00001
+

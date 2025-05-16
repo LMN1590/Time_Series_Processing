@@ -1,13 +1,13 @@
 data:
   root_path: '/root/data/'
-  data_path: 'unnorm_data.csv'
-  output_field: 'Target'
+  data_path: 'unnorm_data_reduced_shift_update_lost.csv'
+  output_field: 'Target_shift_1'
   
   random_sample_from_each_pt: True
   equal_sample: True
   time_steps_len: &time_steps_len 4
   min_time_steps: 20
-  sampled_steps:  16
+  sampled_steps:  15
 
   data_split: [0.7,0.1,0.2]
   scale: True
@@ -20,7 +20,7 @@ data:
 model:
   name: Switch_Former
   params:
-    input_dim: 170
+    input_dim: 96
     in_len: *time_steps_len
     output_dim: 1
 
@@ -28,17 +28,17 @@ model:
     pos_embed_requires_grad: True
 
     nheads: 8
-    n_layers: 4
+    n_layers: 5
     d_model: 512
     dropout_prob: 0.1
     d_ff: 2048
 
-    n_experts: 4
+    n_experts: 8
     capacity_factor: 1.0
 
 training_param:
-  warmup_epochs: 10
-  max_epochs: 50
+  warmup_epochs: 20
+  max_epochs: 100
   warmup_start_lr: 1.0e-8
   eta_min: 1.0e-8
 
@@ -56,3 +56,9 @@ loss:
   - name: MSELoss
     params: {}
     weight: 1.
+  - name: StdReg
+    params: {}
+    weight: 1.0e-3
+  - name: LogCosh
+    params: {}
+    weight: 0.

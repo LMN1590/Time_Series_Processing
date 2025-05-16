@@ -1,12 +1,15 @@
 import yaml
 from typing import Tuple
+import time
 
 from pytorch_lightning import LightningModule
 import torch
+import torch.nn as nn
 
 from const import MODEL_LIST,LOSS_LIST
 from train_util.lr_scheduler import LinearWarmupCosineAnnealingLR
 from train_util.utils import load_hparams_from_yaml
+from preprocess.const import ROBUST_SCALE_CONST,STANDARD_SCALE_CONST,ROBUST_SCALE_NO_LOG
 
 class PatientModelModule(LightningModule):    
     def __init__(
@@ -34,6 +37,7 @@ class PatientModelModule(LightningModule):
                     **loss["params"]
                 )
             )
+        self.denorm_loss = nn.MSELoss()
     
     def training_step(self,batch:Tuple[torch.Tensor, torch.Tensor],batch_idx):
         input, output = batch
@@ -42,17 +46,20 @@ class PatientModelModule(LightningModule):
         
         prediction = self.net(input)
         mean = prediction[0]
-        std = prediction[1]
+        var = prediction[1]
         
-        loss = torch.zeros(1).cuda()
+        loss = torch.zeros(1).float().cuda()
         
         for idx, loss_setting in enumerate(self.loss_params):
             loss_func = getattr(self,loss_setting["name"])
-            loss_val = loss_func(mean,std,output) * loss_setting["weight"]
+            loss_val = loss_func(mean,var,output) * loss_setting["weight"]
             loss += loss_val
+            self.log(
+                f"train/{loss_setting['name']}", loss_val,prog_bar=True,logger=True
+            )
 
         self.log(
-            "train/mse", loss, prog_bar=True, logger=True
+            "train/all", loss, prog_bar=True, logger=True
         )
         return loss
 
@@ -63,17 +70,20 @@ class PatientModelModule(LightningModule):
         
         prediction = self.net(input)
         mean = prediction[0]
-        std = prediction[1]
+        var = prediction[1]
         
-        loss = torch.zeros(1).cuda()
+        loss = torch.zeros(1).float().cuda()
         
         for idx, loss_setting in enumerate(self.loss_params):
             loss_func = getattr(self,loss_setting["name"])
-            loss_val = loss_func(mean,std,output) * loss_setting["weight"]
+            loss_val = loss_func(mean,var,output) * loss_setting["weight"]
             loss += loss_val
+            self.log(
+                f"val/{loss_setting['name']}", loss_val,prog_bar=True,logger=True
+            )
         
         self.log(
-            "val/mse", loss, prog_bar=True, logger=True
+            "val/all", loss, prog_bar=True, logger=True
         )
         return loss
     
@@ -84,25 +94,71 @@ class PatientModelModule(LightningModule):
         
         prediction = self.net(input)
         mean = prediction[0]
-        std = prediction[1]
+        var = prediction[1]
         
-        loss = torch.zeros(1).cuda()
+        loss = torch.zeros(1).float().cuda()
         
         for idx, loss_setting in enumerate(self.loss_params):
             loss_func = getattr(self,loss_setting["name"])
-            loss_val = loss_func(mean,std,output) * loss_setting["weight"]
+            loss_val = loss_func(mean,var,output) * loss_setting["weight"]
             loss += loss_val
+            self.log(
+                f"test/{loss_setting['name']}", loss_val,prog_bar=True,logger=True
+            )
+        
+        # # region Standard Scaler
+        # center = STANDARD_SCALE_CONST["mean"]
+        # scale = STANDARD_SCALE_CONST["scale"]
+        # # endregion
+
+        # region Robust Scaler
+        center = ROBUST_SCALE_CONST["center"][-1]
+        scale = ROBUST_SCALE_CONST["scale"][-1]
+        # endregion
+        mean_unnorm = mean*scale+center
+        var_unnorm = var*(scale**2)
+        output_unnorm = output*scale+center
+    
+        mean_unlog = torch.exp(mean_unnorm + (var_unnorm)/2)-1
+        output_unlog = torch.exp(output_unnorm)-1
+        denorm_loss = self.denorm_loss(mean_unlog,output_unlog)
+        
         
         self.log(
-            "test/mse", loss, prog_bar=True, logger=True
+            "test/all", loss, prog_bar=True, logger=True
         )
         self.log(
-            "test/pred_mean", mean.mean().item(),prog_bar=True,logger=True
+            "test/pred_mean", mean_unlog.mean().item(),prog_bar=True,logger=True
         )
         self.log(
-            "test/pred_std", std.mean().item(),prog_bar=True,logger=True
+            "test/pred_max", mean_unlog.max().item(),prog_bar=True,logger=True
+        )
+        self.log(
+            "test/pred_min", mean_unlog.min().item(),prog_bar=True,logger=True
+        )
+        self.log(
+            "test/pred_std", mean_unlog.std().item(),prog_bar=True,logger=True
+        )
+        self.log(
+            "test/output_mean", output_unlog.mean().item(),prog_bar=True,logger=True
+        )
+        self.log(
+            "test/output_max", output_unlog.max().item(),prog_bar=True,logger=True
+        )
+        self.log(
+            "test/output_min", output_unlog.min().item(),prog_bar=True,logger=True
+        )
+        self.log(
+            "test/output_std", output_unlog.std().item(),prog_bar=True,logger=True
+        )
+        self.log(
+            "test/pred_denorm_mse", torch.sqrt(denorm_loss),prog_bar=True,logger=True
         )
         return loss
+    
+    def forward(self,x):
+        prediction = self.net(x)
+        return prediction
 
     def configure_optimizers(self):
         decay = []
